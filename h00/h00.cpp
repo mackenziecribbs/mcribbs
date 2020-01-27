@@ -19,7 +19,11 @@ int run()
     // Add your implementation comments here
 
     // Write your code here
+    cout << STUDENT << " starter code." << endl;
+    cout << "[1, 1]" << endl;
+
 
     return 0;
 }
+
 
