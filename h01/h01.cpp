@@ -52,9 +52,9 @@ int run()
     int sumHours = after / 60 % 12;
     sumHours = ((sumHours + 11) % 12) + 1;
     int sumMinutes = after % 60;
-    int diffHours = before / 60;
+    int diffHours = (before + 1440) / 60;
     diffHours = ((diffHours + 11) % 12) + 1;
-    int diffMinutes = before % 60;
+    int diffMinutes = (before + 1440) % 60;
 
     // Output
     cout << endl;
