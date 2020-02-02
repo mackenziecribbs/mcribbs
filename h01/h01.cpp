@@ -11,7 +11,6 @@ using namespace std;
 string STUDENT = "mcribbs";  // Add your Canvas login name
 extern string ASSIGNMENT;
 
-
 /**
  * One line describing what this program does.
  * @return 0 for success.
@@ -62,6 +61,7 @@ int run()
     << timeHours << ":" << timeMinutes << " is [" << sumHours << ":" << sumMinutes
     << ", " << diffHours << ":" << diffMinutes << "]" << endl;
 
-
+cout << setfill('0');
+cout << setw(2) << after / 60 << ":" << setw(2) << after % 60;
     return 0;
 }
