@@ -48,11 +48,11 @@ int run()
     int time = timeHours * 60 + timeMinutes;
     int duration = durationHours * 60 + durationMinutes;
     int after = time + duration;
-    int before = 1440 + time - duration;
+    int before = time - duration;
     int sumHours = after / 60 % 12;
     int sumMinutes = after % 60;
-    int diffHours = before / 60;
-    int diffMinutes = before % 60;
+    int diffHours = (1440 + before) / 60;
+    int diffMinutes = (1440 + before) % 60;
 
     // Output
     cout << endl;
