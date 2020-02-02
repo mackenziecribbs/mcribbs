@@ -49,7 +49,7 @@ int run()
     int duration = durationHours * 60 + durationMinutes;
     int after = time + duration;
     int before = time - duration;
-    int sumHours = after / 60;
+    int sumHours = after / 60 % 12;
     int sumMinutes = after % 60;
     int diffHours = before / 60;
     int diffMinutes = before % 60;
