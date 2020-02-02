@@ -62,7 +62,7 @@ int run()
     << ", " << diffHours << ":" << diffMinutes << "]" << endl;
 
     cout << setfill('0');
-    cout << setw(2) << after / 60 << ":" << setw(2) << after % 60;
+    cout << setw(2) << after / 60 << ":" << setw(2) << before % 60;
 
     return 0;
 }
