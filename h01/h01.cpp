@@ -50,6 +50,7 @@ int run()
     int after = time + duration;
     int before = time - duration;
     int sumHours = after / 60 % 12;
+    sumHours = ((sumHours + 11) % 12) + 1;
     int sumMinutes = after % 60;
     int diffHours = before / 60;
     diffHours = ((diffHours + 11) % 12) + 1;
