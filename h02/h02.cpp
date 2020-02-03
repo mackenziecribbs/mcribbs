@@ -31,7 +31,7 @@ cout << "Desired weight of the dieter (in pounds): ";
 const int gramsPerPound = 454;
 const int weightOfSoda = 350; // grams
 const double amountOfSweetner = 0.001;
-double sweetenerInGrams = weightOfSoda * amountOfSweetner;
+double sweetenerInGrams = weightOfSoda * 0.001;
 
 // Processing
 int humanWeightInGrams = humanWeight * 454;
