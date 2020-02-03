@@ -36,7 +36,7 @@ double sweetenerInGrams = weightOfSoda * 0.001;
 // Processing
 int humanWeightInGrams = humanWeight * 454;
 double mouseLethalDose = mouseDose / mouseWeight;
-double humanLethalDose = mouseLethalDose * humanWeightInGrams;
+int humanLethalDose = mouseLethalDose * humanWeightInGrams;
 int sodaLethalDose = humanLethalDose / sweetenerInGrams;
 
 // Output
