@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date 2/2/2020
  *  @file h02.cpp
  */
 #include <iostream>
@@ -8,18 +8,38 @@
 #include <iomanip>
 using namespace std;
 
-string STUDENT = "Who Are You?";  // Add your Canvas login name
+string STUDENT = "mcribbs";  // Add your Canvas login name
 extern string ASSIGNMENT;
 
 /**
- * One line describing what this program does.
+ * Tells you how much diet soda you can drink without dying
  * @return 0 for success.
  */
 int run()
 {
-    // Add your implementation comments here
+// inputs: amount of artificial sweetener to kill mouse, weight of the mouse, weight of dieter
 
-    // Write your code here
+// Prompt and read the input
+int mouseWeight, mouseDose, humanWeight;
+cout << "Weight of the mouse in grams: ";
+    cin >> mouseWeight;
+cout << "Lethal dose for the mouse (in grams): ";
+    cin >> mouseDose;
+cout << "Desired weight of the dieter (in pounds): ";
+    cin >> humanWeight;
+
+const int gramsPerPound = 454;
+const int weightOfSoda = 350; // grams
+const double amountOfSweetner = 0.001;
+double sweetenerInGrams = weightOfSoda * amountOfSweetner;
+
+// Processing
+int humanWeightInGrams = humanWeight * 454;
+double mouseLethalDose = mouseDose / mouseWeight;
+double humanLethalDose = mouseLethalDose / humanWeightInGrams;
+double sodaLethalDose = humanLethalDose / sweetenerInGrams;
+// Output
+cout << "Lethal dose in grams, cans is [" << humanLethalDose << ", " << sodaLethalDose << "]" << endl;
 
     return 0;
 }
