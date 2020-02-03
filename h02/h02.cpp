@@ -20,7 +20,7 @@ int run()
 // inputs: amount of artificial sweetener to kill mouse, weight of the mouse, weight of dieter
 
 // Prompt and read the input
-int mouseWeight, mouseDose, humanWeight;
+double mouseWeight, mouseDose, humanWeight;
 cout << "Weight of the mouse in grams: ";
     cin >> mouseWeight;
 cout << "Lethal dose for the mouse (in grams): ";
@@ -31,11 +31,11 @@ cout << "Desired weight of the dieter (in pounds): ";
 const int gramsPerPound = 454;
 const int weightOfSoda = 350; // grams
 const double amountOfSweetner = 0.001;
-double sweetenerInGrams = weightOfSoda * amountOfSweetner;
+double sweetenerInGrams = weightOfSoda * 0.001;
 
 // Processing
 int humanWeightInGrams = humanWeight * 454;
-double mouseLethalDose = mouseWeight / mouseDose;
+double mouseLethalDose = mouseDose / mouseWeight;
 double humanLethalDose = mouseLethalDose * humanWeightInGrams;
 double sodaLethalDose = humanLethalDose / sweetenerInGrams;
 
