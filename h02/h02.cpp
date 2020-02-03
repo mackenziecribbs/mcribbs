@@ -31,7 +31,7 @@ cout << "Desired weight of the dieter (in pounds): ";
 const int gramsPerPound = 454;
 const int weightOfSoda = 350; // grams
 const double amountOfSweetner = 0.001;
-double sweetenerInGrams = weightOfSoda * 0.001;
+double sweetenerInGrams = weightOfSoda * amountOfSweetner;
 
 // Processing
 int humanWeightInGrams = humanWeight * 454;
@@ -40,6 +40,7 @@ double humanLethalDose = mouseLethalDose * humanWeightInGrams;
 double sodaLethalDose = humanLethalDose / sweetenerInGrams;
 
 // Output
+cout << fixed << setprecision(0);
 cout << "Lethal dose in grams, cans is [" << humanLethalDose << ", " << sodaLethalDose << "]" << endl;
 
     return 0;
