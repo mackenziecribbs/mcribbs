@@ -54,13 +54,13 @@ int run()
     int diffHours = (before + 1440) / 60;
     diffHours = ((diffHours + 11) % 12) + 1;
     int diffMinutes = (before + 1440) % 60;
-    setfill('0');
+
 
     // Output
     cout << endl;
     cout << durationHours << ":" << durationMinutes << " hours after, and before, "
     << timeHours << ":" << timeMinutes << " is [" << sumHours << ":" << setw(2) << sumMinutes
-    << ", " << diffHours << ":" << setw(2) << diffMinutes << "]" << endl;
+    << ", " << diffHours << ":" << setw(2) << diffMinutes << setfill('0') << "]" << endl;
 
     cout << setfill('0');
     cout << setw(2) << after / 60 << ":" << setw(2) << after % 60;
