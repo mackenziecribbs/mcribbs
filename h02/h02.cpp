@@ -40,7 +40,7 @@ int humanLethalDose = mouseLethalDose * humanWeightInGrams;
 int sodaLethalDose = humanLethalDose / sweetenerInGrams;
 
 // Output
-cout << "Lethal dose in grams, cans is [" << humanLethalDose << ", " << sodaLethalDose << "]" << endl;
+cout << "Lethal dose in grams, cans is [" << humanLethalDose << ", " << sodaLethalDose + 1 << "]" << endl;
 
     return 0;
 }
