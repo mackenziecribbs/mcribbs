@@ -37,7 +37,7 @@ double sweetenerInGrams = weightOfSoda * 0.001;
 int humanWeightInGrams = humanWeight * 454;
 double mouseLethalDose = mouseDose / mouseWeight;
 double humanLethalDose = mouseLethalDose * humanWeightInGrams;
-long double sodaLethalDose = humanLethalDose / sweetenerInGrams;
+int sodaLethalDose = humanLethalDose / sweetenerInGrams;
 
 // Output
 cout << "Lethal dose in grams, cans is [" << humanLethalDose << ", " << sodaLethalDose << "]" << endl;
