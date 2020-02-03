@@ -59,7 +59,7 @@ int run()
     // Output
     cout << endl;
     cout << durationHours << ":" << durationMinutes << " hours after, and before, "
-    << timeHours << ":" << setw(2) << timeMinutes << " is [" << sumHours << ":" << setw(2) << sumMinutes
+    << timeHours << ":" << timeMinutes << setfill('0') << " is [" << sumHours << ":" << setw(2) << sumMinutes
     << ", " << diffHours << ":" << setw(2) << diffMinutes << "]" << endl;
 
     cout << setfill('0');
