@@ -54,6 +54,7 @@ int run()
     int diffHours = (before + 1440) / 60;
     diffHours = ((diffHours + 11) % 12) + 1;
     int diffMinutes = (before + 1440) % 60;
+    setfill('0');
 
     // Output
     cout << endl;
