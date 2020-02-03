@@ -58,11 +58,11 @@ int run()
     // Output
     cout << endl;
     cout << durationHours << ":" << durationMinutes << " hours after, and before, "
-    << timeHours << ":" << timeMinutes << " is [" << sumHours << ":" << sumMinutes
-    << ", " << diffHours << ":" << diffMinutes << "]" << endl;
+    << timeHours << ":" << timeMinutes << " is [" << sumHours << ":" << setw(2) << sumMinutes
+    << ", " << diffHours << ":" << setw(2) << diffMinutes << "]" << endl;
 
     cout << setfill('0');
-    cout << setw(2) << before / 60 << ":" << setw(2) << before % 60;
+    cout << setw(2) << after / 60 << ":" << setw(2) << after % 60;
 
     return 0;
 }
