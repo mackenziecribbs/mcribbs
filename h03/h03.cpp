@@ -100,7 +100,19 @@ double letterToPoints(stringIn letterGrade)
 	{
 		doubleresult = {0.70};
 	}
-	else if(letterGrade == "A+" || "F+" || "F-")
+	else if(letterGrade == "F")
+	{
+		doubleresult = {0.0};
+	}
+	else if(letterGrade == "A+")
+	{
+		doubleresult = {INVALID_COMBINATION};
+	}
+	else if(letterGrade == "F+")
+	{
+		doubleresult = {INVALID_COMBINATION};
+	}
+	else if(letterGrade == "F-")
 	{
 		doubleresult = {INVALID_COMBINATION};
 	}
