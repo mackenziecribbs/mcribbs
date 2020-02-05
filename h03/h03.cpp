@@ -66,39 +66,39 @@ double letterToPoints(stringIn letterGrade)
 	}
 	else if (letterGrade == "B+")
 	{
-		doubleresult = {3.4};
+		doubleresult = {3.3};
 	}
 	else if(letterGrade == "B")
 	{
-		doubleresult = {3.1};
+		doubleresult = {3.0};
 	}
 	else if(letterGrade == "B-")
 	{
-		doubleresult = {2.8};
+		doubleresult = {2.7};
 	}
 	else if(letterGrade == "C+")
 	{
-		doubleresult = {2.5};
+		doubleresult = {2.3};
 	}
 	else if(letterGrade == "C")
 	{
-		doubleresult = {2.2};
+		doubleresult = {2.0};
 	}
 	else if(letterGrade == "C-")
 	{
-		doubleresult = {1.9};
+		doubleresult = {1.7};
 	}
 	else if(letterGrade == "D+")
 	{
-		doubleresult = {1.6};
+		doubleresult = {1.3};
 	}
 	else if(letterGrade == "D")
 	{
-		doubleresult = {1.3};
+		doubleresult = {1.0};
 	}
 	else if(letterGrade == "D-")
 	{
-		doubleresult = {1.0};
+		doubleresult = {0.70};
 	}
 	else if(letterGrade == "A=" || "F+" || "F-")
 	{
