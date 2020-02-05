@@ -120,11 +120,11 @@ void printReport(double points)
 	{
 		cout << "Invalid Input";
 	}
-	if(points == INVALID_COMBINATION)
+	else if(points == INVALID_COMBINATION)
 	{
 		cout << "Invalid combination";
 	}
-	if(points >= 0)
+	else if(points >= 0)
 	{
 		cout << points;
 	}
