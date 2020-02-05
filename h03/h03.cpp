@@ -120,6 +120,7 @@ void printReport(double points)
 	if(points == INVALID_COMBINATION)
 		cout << "Invalid combination";
 
+	cout << fixed << setprecision(1) << endl;
 	cout << "Grade value is [" << points << "]" << endl;
 	//cout << "]";
 }
