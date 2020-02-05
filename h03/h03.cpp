@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h03.cpp
  */
 #include <iostream>
@@ -9,11 +9,12 @@
 using namespace std;
 using stringIn = const string&;
 
-string STUDENT = "WHO ARE YOU"; // Add your Canvas login name
+string STUDENT = "mcribbs"; // Add your Canvas login name
 extern string ASSIGNMENT;
 
 // Function Prototypes
 void printTitle();
+cout << STUDENT << ASSIGNMENT << endl;
 string getInput();
 double letterToPoints(stringIn letterGrade);
 void printReport(double points);
