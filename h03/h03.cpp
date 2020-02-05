@@ -102,11 +102,11 @@ double letterToPoints(stringIn letterGrade)
 	}
 	else if(letterGrade == "A+" || "F+" || "F-")
 	{
-		doubleresult = {INVALID_INPUT};
+		doubleresult = {INVALID_COMBINATION};
 	}
 	else
 	{
-		doubleresult = {INVALID_COMBINATION};
+		doubleresult = {INVALID_INPUT};
 	}
 	return doubleresult;
 }
@@ -118,7 +118,7 @@ void printReport(double points)
 
 	if(points == INVALID_INPUT)
 	{
-		cout << "Invalid Input";
+		cout << "Invalid input";
 	}
 	else if(points == INVALID_COMBINATION)
 	{
