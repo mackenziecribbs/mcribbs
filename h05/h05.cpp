@@ -21,6 +21,14 @@ if (country.substr(0,3) == islands || last == "es" || last == "is" || last == "o
 {
     prefix = "les ";
 }
+else if(country.substr(country.size() - 1) == "e" || country.substr(country.size() - 1) == "o")
+{
+    prefix = "La ";
+}
+else
+{
+    prefix = "Le ";
+}
 
 result = prefix + country;
 return result;
