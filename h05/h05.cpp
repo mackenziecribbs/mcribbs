@@ -17,6 +17,13 @@ string islands = "iles";
 int len = country.size();
 string last = country.substr(country.size() - 2);
 
+string vowels = "AEIOU";
+char first = country.at(0);
+if (vowels.find(first) != string::npos )
+{
+    prefix = "L'";
+}
+
 if (country.substr(0,3) == islands || last == "es" || last == "is" || last == "os" || last == "as")
 {
     prefix = "les ";
