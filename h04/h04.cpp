@@ -55,7 +55,7 @@ string getStatus(double gpa, int credits, int honorsCredits)
 	{
 		result = "magna cum laude";
 	}
-	else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits < 15)
+	else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits >= 15)
 	{
 		result = "magna cum laude";
 	}
