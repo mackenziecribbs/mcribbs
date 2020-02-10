@@ -22,6 +22,11 @@ char first = country.at(0);
 string plain = "Isreal, Madagascar, Sri Lanka, Singapore, Monaco, Cuba, Cyprus";
 string masculine = "Belize, Cambodge, Mexique, Mozambique, Zaire, Zimbabwe";
 
+if (vowels.find(first) != string::npos )
+{
+    prefix = "l'";
+}
+
 if (masculine.find(country) != string::npos)
 {
     prefix = "el ";
@@ -31,22 +36,17 @@ else if(plain.find(country) != string::npos)
     prefix = " ";
 }
 
-if (vowels.find(first) != string::npos )
-{
-    prefix = "L'";
-}
-
 if (country.substr(0,4) == islands || last == "es" || last == "is" || last == "os" || last == "as")
 {
     prefix = "les ";
 }
 else if(country.substr(country.size() - 1) == "e" || country.substr(country.size() - 1) == "o")
 {
-    prefix = "La ";
+    prefix = "la ";
 }
 else
 {
-    prefix = "Le ";
+    prefix = "le ";
 }
 
 result = prefix + country;
