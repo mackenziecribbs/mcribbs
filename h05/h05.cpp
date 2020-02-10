@@ -12,15 +12,16 @@ string STUDENT = "mcribbs";  // Add your Canvas login name
 string toFrenchGender(const string& country)
 {
 string result = "who knows?";
-string prefix;
-// country end in letter e or o? feminine prefix -> la (space)
-// otherwise? masculine prefix -> le (space)
-// with these exceptions
-//  belize cambodge mexique mozabique zaire zimbabwe (all Le)
-// starts with a vowel? prefix L' (no space)
-// plural? prefix is les (space)
-// israel, madagascar, Sri Lanka, Singapore, Monaco,
-// cuba and cyprus have no prefix
+string prefix = "";
+string islands = "iles";
+int len = country.size();
+string last = country.substr(country.size() - 2);
+
+if (country.substr(0,3) == islands || last == "es" || last == "is" || last == "os" || last == "as")
+{
+    prefix = "les ";
+}
+
 result = prefix + country;
 return result;
 }
