@@ -1,0 +1,25 @@
+INSTRUCTOR TESTING H05--mcribbs
+----------------------------------------------------------------------
+Checking function: toFrenchGender("country") -------------------
+   + toFrenchGender("Republique dominicaine")->la Republique dominicaine
+   + toFrenchGender("iles Malouines")->les iles Malouines
+   + toFrenchGender("Chili")->le Chili
+   + toFrenchGender("iles Galapagos")->les iles Galapagos
+   + toFrenchGender("Autriche")->l'Autriche
+   + toFrenchGender("Canada")->le Canada
+   + toFrenchGender("Cuba")->Cuba
+   + toFrenchGender("Madagascar")->Madagascar
+   + toFrenchGender("Luxembourg")->le Luxembourg
+   + toFrenchGender("Panama")->le Panama
+   + toFrenchGender("Slovenie")->la Slovenie
+   + toFrenchGender("iles Salomon")->les iles Salomon
+   + toFrenchGender("Ecosse")->l'Ecosse
+   + toFrenchGender("Suede")->la Suede
+   + toFrenchGender("Bahamas")->les Bahamas
+----------------------------------------------------------------------
+  Tests passing 15/15 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H05:mcribbs: ALL TESTS -- PASS 15/15 (100%).
+----------------------------------------------------------------------
+MTU4MTMxNzU4OTptY3JpYmJzOkgwNToxMDAuMDAl
