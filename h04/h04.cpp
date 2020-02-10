@@ -47,10 +47,6 @@ string getStatus(double gpa, int credits, int honorsCredits)
 	{
 		result = "not graduating";
 	}
-	if (gpa < 3.6)
-	{
-		result = "graduating";
-	}
 	else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits < 15)
 	{
 		result = "cum laude";
