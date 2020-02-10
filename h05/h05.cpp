@@ -1,15 +1,21 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h05.cpp
  */
 #include <string>
 using namespace std;
 
-string STUDENT = "WHO AM I?";  // Add your Canvas login name
-
+string STUDENT = "mcribbs";  // Add your Canvas login name
 // Write your function here
 
+string toFrenchGender(const string& country)
+{
+string result = "who knows?";
+
+
+return result;
+}
 
 /////////////// Optional Student Code /////////////////
 int run()
