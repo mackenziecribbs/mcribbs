@@ -65,7 +65,7 @@ string getStatus(double gpa, int credits, int honorsCredits)
 	}
 	else
 	{
-		result = "not graduating";
+		result = "graduating";
 	}
 
 
