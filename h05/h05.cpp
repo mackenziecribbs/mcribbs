@@ -24,7 +24,7 @@ if (vowels.find(first) != string::npos )
     prefix = "L'";
 }
 
-if (country.substr(0,3) == islands || last == "es" || last == "is" || last == "os" || last == "as")
+if (country.substr(0,4) == islands || last == "es" || last == "is" || last == "os" || last == "as")
 {
     prefix = "les ";
 }
