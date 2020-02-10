@@ -43,33 +43,35 @@ int run()
 string getStatus(double gpa, int credits, int honorsCredits)
 {
 	string result;
-	if (gpa >= 2.0 && credits >= 180)
+	if (gpa < 2.0 || credits < 180)
 	{
-		if (gpa < 3.6)
-		{
-			result = "graduating";
-		}
-		else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits < 15)
-		{
-			result = "cum laude";
-		}
-		else if (gpa >= 3.8 && honorsCredits < 15)
-		{
-			result = "magna cum laude";
-		}
-		else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits < 15)
-		{
-			result = "magna cum laude";
-		}
-		else if (gpa >= 3.8 && honorsCredits >= 15)
-		{
-			result = "summa cum laude";
-		}
+		result = "not graduating";
+	}
+	if (gpa < 3.6)
+	{
+		result = "graduating";
+	}
+	else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits < 15)
+	{
+		result = "cum laude";
+	}
+	else if (gpa >= 3.8 && honorsCredits < 15)
+	{
+		result = "magna cum laude";
+	}
+	else if (gpa >= 3.6 && gpa < 3.8 && honorsCredits < 15)
+	{
+		result = "magna cum laude";
+	}
+	else if (gpa >= 3.8 && honorsCredits >= 15)
+	{
+		result = "summa cum laude";
+	}
 	else
 	{
-		result = "Invalid";
+		result = "not graduating";
 	}
-	}
+
 
 	return result;
 }
