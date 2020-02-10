@@ -19,6 +19,16 @@ string last = country.substr(country.size() - 2);
 
 string vowels = "AEIOU";
 char first = country.at(0);
+string plain = "Isreal, Madagascar, Sri Lanka, Singapore, Monaco, Cuba, Cyprus";
+string masculine = "Belize, Cambodge, Mexique, Mozambique, Zaire, Zimbabwe";
+if (masculine.find(country) != string::npos)
+{
+    prefix = "el ";
+}
+else if(plain.find(country) != string::npos)
+{
+    prefix = "";
+}
 if (vowels.find(first) != string::npos )
 {
     prefix = "L'";
