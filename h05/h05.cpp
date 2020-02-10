@@ -27,16 +27,16 @@ if (vowels.find(first) != string::npos )
     prefix = "l'";
 }
 
-if (masculine.find(country) != string::npos)
+else if (masculine.find(country) != string::npos)
 {
     prefix = "el ";
 }
 else if(plain.find(country) != string::npos)
 {
-    prefix = " ";
+    prefix = "le";
 }
 
-if (country.substr(0,4) == islands || last == "es" || last == "is" || last == "os" || last == "as")
+else if (country.substr(0,4) == islands || last == "es" || last == "is" || last == "os" || last == "as")
 {
     prefix = "les ";
 }
