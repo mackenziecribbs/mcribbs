@@ -13,10 +13,10 @@ string STUDENT = "mcribbs";  // Add your Canvas login name
 int sumNums(const string& str)
 {
 	int result{};
-	int sum{0};
-	int num{0};
+	int sum;
+	int num;
 	int digit{0};
-	for (size_t i = 0, len = str.size(); i < len; ++i)
+	for (size_t i{0}, len = str.size(); i < len; ++i)
 	{
 		char ch = str.at(i);
 		if (isdigit(ch))
@@ -48,6 +48,11 @@ int run()
 	// cout << R"(sumNums("aa11b33")->44? )" << sumNums("aa11b33") << endl;
 	// cout << R"(sumNums("7 11")->18? )" << sumNums("7 11") << endl;
 
+	cout << "Enter a string: ";
+	string str;
+	cin >> str;
+
+	cout << "[" << sumNums(str) << "]" << endl;
     return 0;
 }
 
