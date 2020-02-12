@@ -21,6 +21,7 @@ int sumNums(const string& str)
 		char ch = str.at(i);
 		if (isdigit(ch))
 		{
+			++num;
 			ch = ch - 0;
 			num = num * 10;
 			num = num + ch;
