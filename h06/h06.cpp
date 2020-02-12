@@ -12,20 +12,20 @@ string STUDENT = "mcribbs";  // Add your Canvas login name
 // Add your function here
 int sumNums(const string& str)
 {
-//	int result{};
+	int result{};
 
 	int sum{0};
 	int num{0};
+
 	for (size_t i = 0, len = str.size(); i < len; ++i)
 	{
 		char ch = str.at(i);
 		if (isdigit(ch))
 		{
-			++num;
-			ch = ch - 0;
+			int digit = ch - 0;
 			num = num * 10;
-			num = num + ch;
-			//result = num;
+			num = num + digit;
+
 		}
 		else
 		{
@@ -34,8 +34,8 @@ int sumNums(const string& str)
 
 		}
 	}
-
-	return num;
+	result = sum + num;
+	return result;
 }
 
 
