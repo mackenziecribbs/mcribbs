@@ -23,7 +23,7 @@ int sumNums(const string& str)
 		ch = str.at(i);
 		if (isdigit(ch))
 		{
-			digit = num - 0;
+			digit = ch - 0;
 			num *= 10;
 			num += digit;
 		}
