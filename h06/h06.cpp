@@ -31,7 +31,7 @@ int sumNums(const string& str)
 		{
 			sum = sum + num;
 			num = 0;
-			result = sum;
+
 		}
 	}
 
