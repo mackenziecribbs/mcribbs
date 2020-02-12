@@ -5,6 +5,8 @@
  */
 #include <iostream>
 #include <string>
+#include <cmath>
+#include <iomanip>
 using namespace std;
 
 string STUDENT = "mcribbs";  // Add your Canvas login name
@@ -41,6 +43,19 @@ int run()
     cout << "Weight in metric tons, boxes per ton: ["
         << weightInTons << ", " << boxesPerTon << "]" << endl;
 
+
+    double userTemp, userSpeed, windChill;
+    cout << "Enter the temperature in Fahrenheit: ";
+    cin >> userTemp;
+    cout << "Enter the wind speed in mile-per-hour: ";
+    cin >> userSpeed;
+
+    windChill =  3.71 * sqrt(userSpeed) + 5.81 - (0.25 * userSpeed);
+    windChill = windChill * (userTemp - 91.4);
+    windChill = (windChill * 0.0817) + 91.4;
+
+    cout << fixed << setprecision(3) << endl;
+    cout << "Wind Chill: [" << windChill << "]" << endl;
     return 0;
 }
 
