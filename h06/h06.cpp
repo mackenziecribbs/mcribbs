@@ -15,13 +15,13 @@ int sumNums(const string& str)
 	int result{};
 	int sum{0};
 	int num{0};
-
+	int digit{0};
 	for (size_t i = 0, len = str.size(); i < len; ++i)
 	{
 		char ch = str.at(i);
 		if (isdigit(ch))
 		{
-			int digit = digit + ch - 0;
+			digit = digit + ch - 0;
 			num = num * 10;
 			num = num + digit;
 
