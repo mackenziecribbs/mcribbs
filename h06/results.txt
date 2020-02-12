@@ -1,0 +1,26 @@
+INSTRUCTOR TESTING H06--mcribbs
+----------------------------------------------------------------------
+Checking function: sumNums("str") -------------------
+   + sumNums("i3i110h9")
+   + sumNums("4p5q4g49o7j0")
+   + sumNums("2xz86vr013h2s78c6j")
+   + sumNums("ws569o85oqwrp75om1")
+   + sumNums("a")
+   + sumNums("415hz7n")
+   + sumNums("9wz1d73277r8047")
+   + sumNums("urce")
+   + sumNums("0uiw5x2v8lx")
+   + sumNums("r11v57d12x")
+   + sumNums("d36")
+   + sumNums("dhvj7y365ut85019")
+   + sumNums("fpl")
+   + sumNums("h3pn6f291fh5l7v9i2i")
+   + sumNums("a1234bb11")
+   + sumNums("yh69m662")
+----------------------------------------------------------------------
+  Tests passing 16/16 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H06:mcribbs: ALL TESTS -- PASS 16/16 (100%).
+----------------------------------------------------------------------
+MTU4MTQ4MTY1MjptY3JpYmJzOkgwNjoxMDAuMDAl
