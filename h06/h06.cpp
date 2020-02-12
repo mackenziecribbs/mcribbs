@@ -12,7 +12,6 @@ string STUDENT = "mcribbs";  // Add your Canvas login name
 // Add your function here
 int sumNums(const string& str)
 {
-	int result = 0;
 
 	int sum{0};
 	int num{0};
@@ -33,7 +32,7 @@ int sumNums(const string& str)
 		}
 	}
 
-	return result;
+	return sum;
 }
 
 
