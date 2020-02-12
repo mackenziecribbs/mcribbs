@@ -13,12 +13,12 @@ string STUDENT = "mcribbs";  // Add your Canvas login name
 int sumNums(const string& str)
 {
 	int result{};
-	int sum;
-	int num;
-	int digit{0};
+	int sum{0};
+	int num{0};
 	for (size_t i{0}, len = str.size(); i < len; ++i)
 	{
 		char ch = str.at(i);
+		int digit = ch - '0';
 		if (isdigit(ch))
 		{
 			digit = digit + ch - 0;
