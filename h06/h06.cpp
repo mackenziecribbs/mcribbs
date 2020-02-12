@@ -14,7 +14,25 @@ int sumNums(const string& str)
 {
 	int result = 0;
 
-
+	int sum{0};
+	int num{0};
+	int digit{};
+	char ch{};
+	for (size_t i = 0, len = str.size(); i < len; ++i)
+	{
+		ch = str.at(i);
+		if (isdigit(ch))
+		{
+			digit = num - 0;
+			num *= 10;
+			num += digit;
+		}
+		else
+		{
+			sum += num;
+			num = 0;
+		}
+	}
 
 	return result;
 }
