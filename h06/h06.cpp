@@ -28,7 +28,7 @@ int sumNums(const string& str)
 		}
 		else
 		{
-			sum += num;
+			sum = sum + num;
 			num = 0;
 		}
 	}
