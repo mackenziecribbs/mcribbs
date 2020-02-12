@@ -1,16 +1,23 @@
-/**
- *  @author Put your name here
- *  @date Put the date here
+ /**
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h06.cpp
  */
 #include <string>
 #include <cctype>
 using namespace std;
 
-string STUDENT = "WHO AM I";  // Add your Canvas login name
+string STUDENT = "mcribbs";  // Add your Canvas login name
 
 // Add your function here
+int sumNums(const string& str)
+{
+	int result = 0;
 
+
+
+	return result;
+}
 
 
 
