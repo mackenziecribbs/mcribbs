@@ -32,7 +32,7 @@ int sumNums(const string& str)
 		}
 	}
 
-	return sum;
+	return num;
 }
 
 
