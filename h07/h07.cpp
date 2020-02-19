@@ -30,7 +30,7 @@ string zipZap(const string& str)
 
             if(subs.front() == 'z' && subs.back() == 'p')
             {
-                result += "zip";
+                result += "zp";
                 i += 3;
             }
             else
