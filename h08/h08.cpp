@@ -53,8 +53,10 @@ int checkDigit(int zip)
 
     }
     result = 10 - (sum % 10);
-    if(result== 10)
+    if(result == 10)
+    {
         result = 0;
+    }
     return result;
 }
 
