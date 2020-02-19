@@ -49,7 +49,7 @@ int checkDigit(int zip)
     for(int i = 0; i < 5; ++i)
     {
         sum += zip % 10;
-        zip /= 10;
+        zip %= 10;
 
     }
     result = 10 - (sum % 10);
