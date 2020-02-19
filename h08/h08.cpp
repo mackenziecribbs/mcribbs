@@ -71,7 +71,7 @@ string barCode(int zip)
         result = codeForDigit(num) + result;
         zip /= 10;
     }
-    result = codeForDigit(checkDigit(check)) + "|";
+    result = codeForDigit(checkDigit(check));
     result = "|" + result;
     return result;
 }
