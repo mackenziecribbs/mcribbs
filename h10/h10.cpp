@@ -34,7 +34,8 @@ bool read(const string& str, string& name, bool nameb = false)
 }
 bool read(char& a, char sentinel)
 {
-    cout << a;
+    if(a == sentinel)
+        cout << a;
     return false;
 }
 
