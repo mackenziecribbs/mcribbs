@@ -26,7 +26,7 @@ bool read(const string& str, double& gpa, bool gpab = false)
     cin >> gpa;
     return false;
 }
-bool read(const string& str, string& name, bool nameb = false)
+bool read(const string& str, string& name, bool nameb)
 {
     bool result;
     cout << "What is your full name? ";
