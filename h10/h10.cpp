@@ -22,9 +22,20 @@ bool read(const string& str, int& age, bool ageb)
 }
 bool read(const string& str, double& gpa, bool gpab = false)
 {
-    cout << "What is your gpa? ";
-    cin >> gpa;
-    return false;
+    string junk{""};
+    cout << str;
+    cin >> gpa >> junk;
+    cin.ignore(1024, '\n');
+    if (cin.fail())
+    {
+        gpab = false;
+    }
+    else
+    {
+        cin.clear();
+        gpab = true;
+    }
+    return gpab;
 }
 bool read(const string& str, string& name, bool nameb)
 {
