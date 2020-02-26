@@ -20,13 +20,13 @@ bool read(const string& str, int& age, bool ageb = false)
     cin >> age;
     return false;
 }
-bool read(const string& str, double& gpa, bool gpab = true)
+bool read(const string& str, double& gpa, bool gpab = false)
 {
     cout << "What is your gpa? ";
     cin >> gpa;
     return false;
 }
-bool read(const string& str, string& name, bool nameb = true)
+bool read(const string& str, string& name, bool nameb = false)
 {
     cout << "What is your full name? ";
     getline(cin, name);
