@@ -30,7 +30,7 @@ bool read(const string& str, double& gpa, bool gpab)
     {
         gpab = false;
     }
-    else
+    else if (!cin.fail())
     {
         cin.clear();
         gpab = true;
