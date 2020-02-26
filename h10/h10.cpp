@@ -29,6 +29,7 @@ bool read(const string& str, double& gpa, bool gpab = false)
 bool read(const string& str, string& name, bool nameb = false)
 {
     cout << "What is your full name? ";
+    getline(cin, name);
     return false;
 }
 bool read(char& a, char sentinel)
