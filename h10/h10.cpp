@@ -14,7 +14,7 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Place your function definitions in this file.
 
-bool read(const string& str, int& age, bool ageb = false)
+bool read(const string& str, int& age, bool ageb)
 {
     cout << "How old are you? ";
     cin >> age;
@@ -28,9 +28,18 @@ bool read(const string& str, double& gpa, bool gpab = false)
 }
 bool read(const string& str, string& name, bool nameb = false)
 {
+    bool result;
     cout << "What is your full name? ";
-    getline(cin, name);
-    return false;
+    if(nameb)
+    {
+        result = false;
+    }
+    else
+    {
+        result = true;
+        getline(cin, name);
+    }
+    return result;
 }
 bool read(char& a, char sentinel)
 {
