@@ -46,6 +46,11 @@ string toRoman(int n)
 {
     string result;
 
+    if(n <= 0 || n >= 4000)
+    {
+        result = "OUT OF RANGE";
+    }
+
     return result;
 }
 
