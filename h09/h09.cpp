@@ -56,26 +56,26 @@ string toRoman(int n)
         e = d % 10;
         d /= 10;
         string symbols = "IVX";
-        string a = digit(e, symbols);
+        string str1 = digit(e, symbols);
         e = d % 10;
         d /= 10;
         symbols = "XLC";
-        string b = digit(e, symbols);
+        string str2 = digit(e, symbols);
         e = d % 10;
         d /= 10;
         symbols = "CDM";
-        string c = digit(e, symbols);
+        string str3 = digit(e, symbols);
         e = d % 10;
         d /= 10;
         symbols = "MMM";
-        string f = digit(e, symbols);
+        string str4 = digit(e, symbols);
         while (d != 0)
         {
-            f += "M";
+            str4 += "M";
             d--;
         }
 
-        result = f + c + b + a;
+        result = str4 + str3 + str2 + str1;
     }
     return result;
 }
