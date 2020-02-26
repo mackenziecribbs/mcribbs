@@ -47,6 +47,10 @@ bool read(const string& str, double& gpa, bool gpab)
     {
         gpab = true;
     }
+    else
+    {
+        gpab = false;
+    }
     return gpab;
 }
 bool read(const string& str, string& name, bool nameb = false)
