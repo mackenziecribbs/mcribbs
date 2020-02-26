@@ -53,10 +53,10 @@ bool read(const string& str, string& name, bool nameb = false)
 }
 bool read(char& a, char sentinel)
 {
+    cin.get(a);
     bool result;
     if(a == sentinel)
     {
-        cout << a;
         result = false;
     }
     else
