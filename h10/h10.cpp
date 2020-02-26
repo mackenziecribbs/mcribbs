@@ -18,7 +18,15 @@ bool read(const string& str, int& age, bool ageb)
 {
     cout << str;
     cin >> age;
-    return false;
+    if (!cin.fail())
+    {
+        ageb = true;
+    }
+    else if (cin.fail())
+    {
+        ageb = false;
+    }
+    return ageb;
 }
 bool read(const string& str, double& gpa, bool gpab)
 {
