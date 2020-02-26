@@ -8,12 +8,27 @@
 #include <string>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 #include "h10.h"
 
 // Place your function definitions in this file.
-
+bool read(const string& str, int& age, bool ageb = false)
+{
+    return false;
+}
+bool read(const string& str, double& gpa, bool gpab = false)
+{
+    return false;
+}
+bool read(const string& str, string& name, bool nameb = false)
+{
+    return false;
+}
+bool read(char& a, char sentinel)
+{
+    return false;
+}
 
 
 
