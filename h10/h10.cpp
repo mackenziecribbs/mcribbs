@@ -34,14 +34,14 @@ bool read(const string& str, double& gpa, bool gpab)
     cout << str;
     cin >> gpa >> junk;
     cin.ignore(1024, '\n');
-    if (cin.fail())
+    if (!cin.fail())
+    {
+        gpab = true;
+        cin.clear();
+    }
+    else if (cin.fail())
     {
         gpab = false;
-    }
-    else if (!cin.fail())
-    {
-        cin.clear();
-        gpab = true;
     }
     return gpab;
 }
