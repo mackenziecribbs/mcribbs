@@ -47,7 +47,7 @@ bool read(const string& str, double& gpa, bool gpab)
     {
         gpab = true;
     }
-    else
+    else if (gpa < 0.0 && gpa > 4.0)
     {
         gpab = false;
     }
