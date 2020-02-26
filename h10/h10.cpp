@@ -18,7 +18,7 @@ bool read(const string& str, int& age, bool ageb = false)
 {
     cout << "How old are you? ";
     cin >> age;
-    return false;
+    return true;
 }
 bool read(const string& str, double& gpa, bool gpab = false)
 {
