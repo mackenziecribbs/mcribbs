@@ -37,7 +37,6 @@ bool read(const string& str, string& name, bool nameb = false)
     else
     {
         result = true;
-        getline(cin, name);
     }
     return result;
 }
