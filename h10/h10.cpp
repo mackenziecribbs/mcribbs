@@ -31,7 +31,7 @@ bool read(const string& str, double& gpa, bool gpab)
         cin >> junk;
         gpab = false;
     }
-    else
+    else if (gpa >= 0.0 && gpa <= 4.0)
     {
         cin.clear();
         gpab = true;
