@@ -45,12 +45,36 @@ string digit(int n, const string& symbols)
 string toRoman(int n)
 {
     string result;
-
+    int d = n;
+    int e;
     if(n <= 0 || n >= 4000)
     {
         result = "OUT OF RANGE";
     }
-
+    else
+    {
+        e = d % 10;
+        d /= 10;
+        string symbols = "IVX";
+        string a = digit(e, symbols);
+        e = d % 10;
+        symbols = "XLC";
+        string b = digit(e, symbols);
+        e = d % 10;
+        d /= 10;
+        symbols = "CDM";
+        string c = digit(e, symbols);
+        e = d % 10;
+        d /= 10;
+        symbols = "MMM";
+        string f = digit(e, symbols);
+        while (d != 0)
+        {
+            f += "M";
+            d--;
+        }
+        result = f + c + b + a;
+    }
     return result;
 }
 
