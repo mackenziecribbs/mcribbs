@@ -24,10 +24,11 @@ bool read(const string& str, double& gpa, bool gpab)
 {
     string junk{""};
     cout << str;
-    cin >> gpa >> junk;
+    cin >> gpa;
     cin.ignore(1024, '\n');
     if (cin.fail())
     {
+        cin >> junk;
         gpab = false;
     }
     else
