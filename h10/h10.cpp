@@ -37,7 +37,7 @@ bool read(const string& str, double& gpa, bool gpab)
     }
     return gpab;
 }
-bool read(const string& str, string& name, bool nameb)
+bool read(const string& str, string& name, bool nameb = false)
 {
     bool result;
     cout << str;
