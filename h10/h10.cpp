@@ -34,7 +34,7 @@ bool read(const string& str, double& gpa, bool gpab)
     cout << str;
     cin >> gpa >> junk;
     cin.ignore(1024, '\n');
-    if (gpa >= 0.0 && gpa <= 4.0)
+    if (!cin.fail())
     {
         gpab = true;
         cin.clear();
@@ -42,6 +42,10 @@ bool read(const string& str, double& gpa, bool gpab)
     else if (cin.fail())
     {
         gpab = false;
+    }
+    if (gpa >= 0.0 && gpa <= 4.0)
+    {
+        gpab = true;
     }
     return gpab;
 }
