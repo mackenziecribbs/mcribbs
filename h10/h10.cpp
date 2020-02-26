@@ -16,11 +16,11 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 bool read(const string& str, int& age, bool ageb)
 {
-    cout << "How old are you? ";
+    cout << str;
     cin >> age;
     return false;
 }
-bool read(const string& str, double& gpa, bool gpab = false)
+bool read(const string& str, double& gpa, bool gpab)
 {
     string junk{""};
     cout << str;
@@ -40,7 +40,7 @@ bool read(const string& str, double& gpa, bool gpab = false)
 bool read(const string& str, string& name, bool nameb)
 {
     bool result;
-    cout << "What is your full name? ";
+    cout << str;
     if(nameb)
     {
         result = false;
