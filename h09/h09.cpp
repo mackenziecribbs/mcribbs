@@ -44,7 +44,7 @@ string digit(int n, const string& symbols)
 
 string toRoman(int n)
 {
-    string result;
+    string result = "";
     int d = n;
     int e;
     if(n <= 0 || n >= 4000)
@@ -58,6 +58,7 @@ string toRoman(int n)
         string symbols = "IVX";
         string a = digit(e, symbols);
         e = d % 10;
+        d /= 10;
         symbols = "XLC";
         string b = digit(e, symbols);
         e = d % 10;
@@ -73,6 +74,7 @@ string toRoman(int n)
             f += "M";
             d--;
         }
+
         result = f + c + b + a;
     }
     return result;
