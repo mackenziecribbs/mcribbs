@@ -1,0 +1,35 @@
+INSTRUCTOR TESTING H10--mcribbs
+----------------------------------------------------------------------
+Checking function: read with int -------------------
+   + Prompt printed->How old are you? 
+   + Bad input checked
+   + Age set correctly->42
+   + Good input checked
+   + Trailing input retained
+----------------------------------------------------------------------
+  Tests passing 5/5 (100%).
+
+Checking function: read (with double) -------------------
+   + Prompt printed->What is your gpa? 
+   X Bad input checked
+   + GPA set correctly
+   + Good input checked
+   + Trailing input discarded
+----------------------------------------------------------------------
+  Tests passing 4/5 (80%).
+
+Checking function: read (with string) -------------------
+   + Prompt printed->What is your full name? 
+   X Reads whole name: Incorrect [mordoch]
+   X Reads one word: Incorrect [mordoch]
+Checking function: read (with string) -------------------
+   + Read sentinel, return false
+   + Not sentinel, return true
+   + Correctly set ch when reading->43
+----------------------------------------------------------------------
+  Tests passing 3/3 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H10:mcribbs: ALL TESTS -- PASS 12/13 (92%).
+----------------------------------------------------------------------
+MTU4MjczNDI0NTptY3JpYmJzOkgxMDo5Mi4zMSU=
