@@ -13,8 +13,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 #include "h10.h"
 
 // Place your function definitions in this file.
+
 bool read(const string& str, int& age, bool ageb = false)
 {
+    //const string& str
     return false;
 }
 bool read(const string& str, double& gpa, bool gpab = false)
