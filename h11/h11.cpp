@@ -36,7 +36,7 @@ void strip()
         {
             inMultiCmt = false;
             cin.get(ch);
-            
+
         }
         else if(!inString && !inSingleCmt && !inMultiCmt)
         {
@@ -53,7 +53,7 @@ void strip()
                 inSingleCmt = true;
             }
         }
-        else if(!inSingleCmt && !inMultiCmt)
+        if(!inSingleCmt && !inMultiCmt)
         {
             cout.put(ch);
         }
