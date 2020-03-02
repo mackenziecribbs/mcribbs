@@ -47,7 +47,10 @@ void strip()
                 inSingleCmt = true;
             }
         }
-    cout.put(ch);
+        if(inString)
+        {
+        cout.put(ch);
+        }
     }
 }
 
