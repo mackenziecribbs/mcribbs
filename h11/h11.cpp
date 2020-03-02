@@ -18,7 +18,7 @@ void strip()
     bool inString = false;
 
     while (cin.get(ch))
-        if (inSingleCmt)
+        if (!inSingleCmt)
         {
             cout.put(ch);
         }
