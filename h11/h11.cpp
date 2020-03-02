@@ -27,7 +27,11 @@ void strip()
         {
             inString = false;
         }
-        //else if(inString && ch == '\\' &&)
+        else if(inString && ch == '\\' && cin.peek() == '"')
+        {
+            cout.put(ch);
+            cin.get(ch);
+        }
         else if(inMultiCmt && ch == '*' && cin.peek() == '/')
         {
             inMultiCmt = false;
