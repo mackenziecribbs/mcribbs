@@ -14,10 +14,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 void expense()
 {
     char ch;
-    double total{0.0};
-    double totalB{0.0};
     while(cin.peek() != EOF) // This is the outer loop
     {
+        while(cin.get(ch))
+        {
 
             if(ch == ' ' && cin.peek() == ' ')
             {
@@ -30,6 +30,8 @@ void expense()
             }
             cout.put(ch);
         }
+        double total{0.0};
+        double totalB{0.0};
         while(cin.peek() != '\n')
         {
             if(isdigit(cin.peek()))
@@ -44,8 +46,8 @@ void expense()
         }
     cout << fixed << setprecision(2);
     cout << ", " << total << endl;
+    }
 }
-
 
 
 
