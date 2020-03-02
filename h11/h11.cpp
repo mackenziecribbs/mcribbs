@@ -37,7 +37,6 @@ void strip()
             if(ch == '"')
             {
                 inString = true;
-                cout.put(ch);
             }
             else if(ch == '/' && cin.peek() == '*')
             {
