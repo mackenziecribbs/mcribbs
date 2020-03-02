@@ -16,34 +16,36 @@ void expense()
     char ch;
     double total{0.0};
     double totalB{0.0};
-    while(cin.get(ch) && cin.peek() != EOF)
+    while(cin.peek() != EOF)
     {
-        if(ch == ' ' && cin.peek() == ' ')
+        while(cin.get(ch) && cin.peek() != EOF)
         {
-            cin.get(ch);
-        }
-        if(isdigit(cin.peek()))
-        {
-            break;
-        }
-        else
+            if(ch == ' ' && cin.peek() == ' ')
+            {
+                cin.get(ch);
+            }
+            if(isdigit(cin.peek()))
+            {
+             break;
+            }
             cout.put(ch);
 
-    }
-    while(cin.peek() != '\n')
-    {
-        if(isdigit(cin.peek()))
-        {
-            cin >> totalB;
-            total += totalB;
         }
-        else
+        while(cin.peek() != '\n')
         {
-            cin.get(ch);
+            if(isdigit(cin.peek()))
+            {
+                cin >> totalB;
+                total += totalB;
+            }
+            else
+            {
+                cin.get(ch);
+            }
         }
-    }
     cout << fixed << setprecision(2);
     cout << ", " << total << endl;
+    }
 }
 
 
