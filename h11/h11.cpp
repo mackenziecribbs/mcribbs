@@ -10,7 +10,12 @@ using namespace std;
 string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Write your function here
-
+void strip()
+{
+    char ch;
+    while (cin.get(ch))
+        cout.put(ch);
+}
 
 //////////////// STUDENT TESTING ////////////////////
 int run()
