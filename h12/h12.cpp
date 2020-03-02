@@ -46,9 +46,10 @@ void expense()
         }
     cout << fixed << setprecision(2);
     cout << ", " << total << endl;
+    cin.get(ch);
+    cout.put(ch);
     }
 }
-
 
 
 //////////////// STUDENT TESTING ////////////////////
