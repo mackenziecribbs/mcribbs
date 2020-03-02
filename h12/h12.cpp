@@ -29,7 +29,6 @@ void expense()
         cout.put(ch);
 
     }
-    cout << ", ";
     while(cin.peek() != '\n')
     {
         if(isdigit(cin.peek()))
@@ -42,7 +41,8 @@ void expense()
             cin.get(ch);
         }
     }
-    cout << fixed << setprecision(2) << total << endl;
+    cout << fixed << setprecision(2);
+    cout << ", " << total << endl;
 }
 
 
