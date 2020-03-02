@@ -15,9 +15,18 @@ void expense()
 {
     char ch;
 
-    while(cin.get(ch))
+    while(cin.get(ch) && cin.peek() != EOF)
     {
+        if(ch == ' ' && cin.peek() == ' ')
+        {
+            cin.get(ch);
+        }
+        if(isdigit(cin.peek()))
+        {
+            break;
+        }
         cout.put(ch);
+        cout << ", ";
     }
 }
 
