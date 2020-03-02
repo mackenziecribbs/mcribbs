@@ -14,10 +14,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 void expense()
 {
     char ch;
-    double total{0.0};
-    double totalB{0.0};
     while(cin.peek() != EOF)
     {
+        double total{0.0};
+        double totalB{0.0};
         while(cin.get(ch))
         {
             if(ch == ' ' && cin.peek() == ' ')
