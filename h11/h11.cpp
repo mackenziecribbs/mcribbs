@@ -36,6 +36,7 @@ void strip()
         {
             inMultiCmt = false;
             cin.get(ch);
+            cin.get(ch);
 
         }
         else if(!inString && !inSingleCmt && !inMultiCmt)
