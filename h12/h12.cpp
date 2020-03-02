@@ -15,6 +15,7 @@ void expense()
 {
     char ch;
     double total{0.0};
+    double totalB{0.0};
     while(cin.get(ch) && cin.peek() != EOF)
     {
         if(ch == ' ' && cin.peek() == ' ')
@@ -33,7 +34,8 @@ void expense()
     {
         if(isdigit(cin.peek()))
         {
-            cin >> total;
+            cin >> totalB;
+            total += totalB;
         }
         else
         {
