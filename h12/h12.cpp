@@ -18,7 +18,7 @@ void expense()
     double totalB{0.0};
     while(cin.peek() != EOF)
     {
-        while(cin.get(ch) && cin.peek() != EOF)
+        while(cin.get(ch))
         {
             if(ch == ' ' && cin.peek() == ' ')
             {
