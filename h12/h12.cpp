@@ -45,9 +45,9 @@ void expense()
             }
         }
     cout << fixed << setprecision(2);
-    cout << ", " << total << endl;
+    cout << ", " << total;
     cin.get(ch);
-
+    cout.put(ch);
     }
 }
 
