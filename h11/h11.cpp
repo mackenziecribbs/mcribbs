@@ -18,6 +18,7 @@ void strip()
     bool inString = false;
 
     while (cin.get(ch))
+    {
         if (inSingleCmt && ch == '\n')
         {
             inSingleCmt = false;
@@ -46,10 +47,8 @@ void strip()
                 inSingleCmt = true;
             }
         }
-        else if(!inSingleCmt && !inMultiCmt)
-        {
-            cout.put(ch);
-        }
+        cout.put(ch);
+    }
 }
 
 //////////////// STUDENT TESTING ////////////////////
