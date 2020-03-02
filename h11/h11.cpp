@@ -51,7 +51,7 @@ void strip()
         {
         cout.put(ch);
         }
-        if(!inSingleCmt && !inMultiCmt)
+        else if(!inSingleCmt && !inMultiCmt)
         {
             cout.put(ch);
         }
