@@ -26,8 +26,9 @@ void expense()
             break;
         }
         cout.put(ch);
-        cout << ", ";
+
     }
+    cout << ", ";
     while(cin.peek() == '\n')
     {
         if(isdigit(cin.peek()))
