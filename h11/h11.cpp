@@ -27,6 +27,7 @@ void strip()
         {
             inString = false;
         }
+        //else if(inString && ch == '\\' &&)
         else if(inMultiCmt && ch == '*' && cin.peek() == '/')
         {
             inMultiCmt = false;
@@ -47,11 +48,7 @@ void strip()
                 inSingleCmt = true;
             }
         }
-        if(inString)
-        {
-        cout.put(ch);
-        }
-        else if(!inSingleCmt && !inMultiCmt)
+        if(!inSingleCmt && !inMultiCmt)
         {
             cout.put(ch);
         }
