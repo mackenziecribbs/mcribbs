@@ -29,6 +29,7 @@ void strip()
         else if(inMultiCmt && ch == '*' && cin.peek() == '/')
         {
             inMultiCmt = false;
+            cin.get(ch);
         }
         else if(!inString && !inSingleCmt && !inMultiCmt)
         {
