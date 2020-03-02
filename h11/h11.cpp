@@ -37,6 +37,7 @@ void strip()
             if(ch == '"')
             {
                 inString = true;
+                cout.put(ch);
             }
             else if(ch == '/' && cin.peek() == '*')
             {
@@ -47,7 +48,6 @@ void strip()
                 inSingleCmt = true;
             }
         }
-        cout.put(ch);
     }
 }
 
