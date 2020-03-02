@@ -8,5 +8,8 @@
 #include <string>
 
 // Place your prototypes here
-
+bool read (const std::string& str, int& age, bool ageb);
+bool read (const std::string& str, double& gpa, bool gpab);
+bool read (const std::string& str, std::string& name, bool nameb);
+bool read (char& a, char sentinel);
 #endif
