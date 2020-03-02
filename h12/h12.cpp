@@ -26,7 +26,8 @@ void expense()
         {
             break;
         }
-        cout.put(ch);
+        else
+            cout.put(ch);
 
     }
     while(cin.peek() != '\n')
