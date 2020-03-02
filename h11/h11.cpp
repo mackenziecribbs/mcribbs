@@ -22,6 +22,10 @@ void strip()
         {
             cout.put(ch);
         }
+        else
+        {
+            inSingleCmt = false;
+        }
 }
 
 //////////////// STUDENT TESTING ////////////////////
