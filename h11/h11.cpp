@@ -13,8 +13,15 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 void strip()
 {
     char ch;
+    bool inSingleCmt = false;
+    bool inMultiCmt = false;
+    bool inString = false;
+
     while (cin.get(ch))
-        cout.put(ch);
+        if (inSingleCmt)
+        {
+            cout.put(ch);
+        }
 }
 
 //////////////// STUDENT TESTING ////////////////////
