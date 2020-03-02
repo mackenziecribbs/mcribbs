@@ -46,6 +46,10 @@ void strip()
                 inSingleCmt = true;
             }
         }
+        else if(!inSingleCmt && !inMultiCmt)
+        {
+            cout.put(ch);
+        }
 }
 
 //////////////// STUDENT TESTING ////////////////////
