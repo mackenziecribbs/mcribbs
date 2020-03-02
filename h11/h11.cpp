@@ -18,13 +18,36 @@ void strip()
     bool inString = false;
 
     while (cin.get(ch))
-        if (!inSingleCmt)
+        if (inSingleCmt && ch == '\n')
         {
-            cout.put(ch);
+            inSingleCmt = false;
+        }
+        else if(inString && ch == '"')
+        {
+            inString = false;
+        }
+        else if(inMultiCmt && ch == '*' && cin.peek() == '/')
+        {
+            inMultiCmt = false;
+        }
+        else if(!inString && !inSingleCmt && !inMultiCmt)
+        {
+            if(ch == '"')
+            {
+                inString = true;
+            }
+            else if(ch == '/' && cin.peek() == '*')
+            {
+                inMultiCmt = true;
+            }
+            else if(ch == '/' && cin.peek() == '/')
+            {
+                inSingleCmt = true;
+            }
         }
         else
         {
-            inSingleCmt = false;
+            cout.put(ch);
         }
 }
 
