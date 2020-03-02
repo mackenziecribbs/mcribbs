@@ -45,10 +45,6 @@ void strip()
                 inSingleCmt = true;
             }
         }
-        else
-        {
-            cout.put(ch);
-        }
 }
 
 //////////////// STUDENT TESTING ////////////////////
