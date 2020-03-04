@@ -45,13 +45,12 @@ string dataSets(const string& in)
 
         if (dataSet > 1)
         {
-            result += "\n";
+            out << "\n";
         }
-        result += "data set"  + to_string(dataSet) + ":total values = " + to_string(count) + "\n" + "average value = " + to_string((sum/count)) + "\n";
-dataSet++;
-infile >> repeat;
 
-        out << "data set " << dataSet << ": total values = " << count << "\n" << "average value = " << (sum/count) << "\n";
+        out << fixed << setprecision(4) << "data set " << dataSet << ": total values = " << to_string(count) << "\n" << "average value = " << (sum/count) << "\n";
+        dataSet++;
+        infile >> repeat;
     }
 
     return out.str();
