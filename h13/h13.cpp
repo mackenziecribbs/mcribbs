@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h13.cpp
  */
 #include <string>
@@ -15,7 +15,7 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 #include "h13.h"
 
 // Implement your function here
-string dataSets()
+string dataSets(const string& in)
 {
     string result;
 
