@@ -47,11 +47,11 @@ string dataSets(const string& in)
         {
             result += "\n";
         }
-        result = "data set"  + to_string(dataSet) + ":total values = " + to_string(count) + "\n" + "average value = " + to_string((sum/count)) + "\n";
+        result += "data set"  + to_string(dataSet) + ":total values = " + to_string(count) + "\n" + "average value = " + to_string((sum/count)) + "\n";
 
 
     }
-
+    ostringstream out;
     return result;
 }
 
