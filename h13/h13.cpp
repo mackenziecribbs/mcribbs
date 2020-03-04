@@ -52,7 +52,8 @@ string dataSets(const string& in)
 
     }
     ostringstream out;
-    return result;
+    out << in;
+    return out.str();
 }
 
 
