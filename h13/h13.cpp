@@ -32,7 +32,7 @@ string dataSets(const string& in)
     infile >> repeat;
     while(!infile.fail())
     {
-    int sum{};
+    double sum{};
     int count{};
         while(repeat != 0)
         {
