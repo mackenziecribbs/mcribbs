@@ -24,26 +24,33 @@ string dataSets(const string& in)
         result = "data/notfound.txt cannot be opened.";
     }
 
+    int dataSet{1};
+    int repeat;
+    infile >> repeat;
+    while(!infile.fail())
+    {
+    int sum{};
+    int count{};
+        while(repeat != 0)
+        {
+            double value;
+            infile >> value;
+            count += repeat;
+            sum += repeat * value;
+            infile >> repeat;
+        }
 
-    //int data{1};
+    dataSet++;
+    infile >> repeat;
+
+        if (dataSet > 1)
+        {
+            result += "\n";
+        }
+        result = "data set"  + to_string(dataSet) + ":total values = " + to_string(count) + "\n" + "average value = " + to_string((sum/count)) + "\n";
 
 
-    //while(!infile.fail())
-    //{
-        //int sum{};
-       // int count{};
-       // while(in != 0)
-       // {
-           // read value;
-           // repeat += count;
-           // sum = repeat * value;
-           // read next repeat;
-       // }
-       // ostringstream out;
-       // out <<
-       // data++;
-       // next repeat;
-   // }
+    }
 
     return result;
 }
