@@ -1,0 +1,40 @@
+TESTING H13--mcribbs
+----------------------------------------------------------------------
+Checking function: dataSets -------------------
+   + data/ds0.txt output lines->0->0
+   + data/notfound.txt output lines->1->1
+   + Line #1.->data/notfound.txt cannot be opened.
+   + data/ds1.txt output lines->2->2
+   + Line #1.->data set 1: total values = 19
+   + Line #2.->average value = 5.4632
+   + data/ds13.txt output lines->17->17
+   + Line #1.->data set 1: total values = 4
+   + Line #2.->average value = 4.8000
+   + Line #3.->
+   + Line #4.->data set 2: total values = 13
+   + Line #5.->average value = 6.0538
+   + data/ds6.txt output lines->17->17
+   + Line #1.->data set 1: total values = 5
+   + Line #2.->average value = 8.0000
+   + Line #3.->
+   + Line #4.->data set 2: total values = 21
+   + Line #5.->average value = 7.1810
+   + data/ds9.txt output lines->17->17
+   + Line #1.->data set 1: total values = 5
+   + Line #2.->average value = 2.4000
+   + Line #3.->
+   + Line #4.->data set 2: total values = 13
+   + Line #5.->average value = 6.6154
+   + data/ds2.txt output lines->5->5
+   + Line #1.->data set 1: total values = 8
+   + Line #2.->average value = 9.2000
+   + Line #3.->
+   + Line #4.->data set 2: total values = 19
+   + Line #5.->average value = 4.8368
+----------------------------------------------------------------------
+  Tests passing 30/30 (100%).
+
+----------------------------------------------------------------------
+H13:mcribbs:ALL TESTS -- PASS 30/30 (100%).
+----------------------------------------------------------------------
+MTU4MzMwNjMwODptY3JpYmJzOkgxMzoxMDAuMDAl
