@@ -27,13 +27,14 @@ string dataSets(const string& in)
     int dataSet{1};
     int repeat;
     infile >> repeat;
+    ostringstream out;
     while(!infile.fail())
     {
     int sum{};
     int count{};
         while(repeat != 0)
         {
-            double value;
+            double value{0};
             infile >> value;
             count += repeat;
             sum += repeat * value;
@@ -50,9 +51,10 @@ string dataSets(const string& in)
         result += "data set"  + to_string(dataSet) + ":total values = " + to_string(count) + "\n" + "average value = " + to_string((sum/count)) + "\n";
 
 
+
+        out << "data set " << dataSet << ": total values = " << count << "\n" << "average value = " << (sum/count) << "\n";
     }
-    ostringstream out;
-    out << in;
+
     return out.str();
 }
 
