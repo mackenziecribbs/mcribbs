@@ -21,7 +21,8 @@ string dataSets(const string& in)
     ifstream infile{in};
     if (infile.fail())
     {
-        result = "data/notfound.txt cannot be opened.";
+        return "data/notfound.txt cannot be opened.";
+
     }
 
     //Initialization
