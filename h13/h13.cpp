@@ -18,12 +18,32 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 string dataSets(const string& in)
 {
     string result = "";
-
     ifstream infile{in};
     if (infile.fail())
     {
-        result = "data/notfound.txt cannot be opened.";
+        result = "filename cannot be openned.";
     }
+
+
+    //int data{1};
+
+
+    //while(!infile.fail())
+    //{
+        //int sum{};
+       // int count{};
+       // while(in != 0)
+       // {
+           // read value;
+           // repeat += count;
+           // sum = repeat * value;
+           // read next repeat;
+       // }
+       // ostringstream out;
+       // out <<
+       // data++;
+       // next repeat;
+   // }
 
     return result;
 }
