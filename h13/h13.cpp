@@ -17,7 +17,13 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 // Implement your function here
 string dataSets(const string& in)
 {
-    string result;
+    string result = "";
+
+    ifstream infile{in};
+    if (infile.fail())
+    {
+        result = "filename cannot be openned.";
+    }
 
     return result;
 }
