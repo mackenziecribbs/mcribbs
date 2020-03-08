@@ -18,7 +18,6 @@ string getLine(const string& prompt)
 {
     string result;
 
-
     if (!isspace(prompt.back()))
     {
         cout << prompt << ' ';
@@ -26,7 +25,7 @@ string getLine(const string& prompt)
     else if (prompt.empty())
     {
         cin >> result;
-        cout << ' ';
+        cout << " ";
     }
     else
     {
