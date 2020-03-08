@@ -31,9 +31,27 @@ string getLine(const string& prompt)
 }
 int getInt(const string& prompt)
 {
-    int result{};
+    string result;
+    result = getLine(prompt);
+    while (true)
+    {
+        if (!result.empty())
+        {
+            istringstream in(result);
+            int n;
+            in >> n;
+            if (!in.fail())
+            {
+                return n;
+            }
 
-    return result;
+
+        }
+        cout << "Invalid input, try again";
+        result.clear();
+        cin >> result;
+    }
+
 
 }
 double getReal(const string& prompt)
