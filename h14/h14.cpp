@@ -40,7 +40,7 @@ int getInt(const string& prompt)
             istringstream in(result);
             int n;
             in >> n;
-            if (!in.fail() && in.eof())
+            if (!in.fail())
             {
                 return n;
             }
