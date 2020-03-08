@@ -30,7 +30,7 @@ string getLine(const string& prompt)
     {
         cout << prompt;
     }
-
+    getline(cin, result);
     return result;
 }
 int getInt(const string& prompt)
