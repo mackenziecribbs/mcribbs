@@ -61,9 +61,29 @@ int getInt(const string& prompt)
 }
 double getReal(const string& prompt)
 {
-    double result{};
-
-    return result;
+    string result;
+    result = getLine(prompt);
+    while (true)
+    {
+        if (!result.empty())
+        {
+            istringstream in(result);
+            double n;
+            in >> n;
+            if (!in.fail() && in.eof())
+            {
+                return n;
+            }
+            in >> ws;
+            if (!in.fail() && in.eof())
+            {
+                return n;
+            }
+        }
+        cout << "Invalid input, try again";
+        result.clear();
+        cin >> result;
+    }
 
 }
 bool getYN(const string& prompt)
