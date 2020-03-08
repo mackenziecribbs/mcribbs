@@ -18,7 +18,7 @@ string getLine(const string& prompt)
 {
     string result;
 
-    if (!isspace(prompt.back()))
+    if (!prompt.empty() && !isspace(prompt.back()))
     {
         cout << prompt << ' ';
     }
