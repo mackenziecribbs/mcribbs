@@ -108,6 +108,7 @@ bool getYN(const string& prompt)
 
                 }
             }
+            cin >> result;
 
         }
     }
