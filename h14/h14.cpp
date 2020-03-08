@@ -23,6 +23,10 @@ string getLine(const string& prompt)
     {
         cout << prompt << ' ';
     }
+    else
+    {
+        cout << prompt;
+    }
 
     return result;
 }
