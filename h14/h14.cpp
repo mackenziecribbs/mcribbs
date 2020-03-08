@@ -25,6 +25,7 @@ string getLine(const string& prompt)
     }
     else if (prompt.empty())
     {
+        cout << ' ';
         cin >> result;
     }
     else
