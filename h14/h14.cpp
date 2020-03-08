@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h14.cpp
  */
 #include <string>
@@ -9,12 +9,38 @@
 #include <iomanip>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 #include "h14.h"
 
 // Define your functions here
+string getLine(const std::string& prompt)
+{
+    string result;
 
+    return result;
+}
+int getInt(const std::string& prompt)
+{
+    int result{};
+
+    return result;
+
+}
+double getReal(const std::string& prompt)
+{
+    double result{};
+
+    return result;
+
+}
+bool getYN(const std::string& prompt)
+{
+    bool result{};
+
+    return result;
+
+}
 
 
 
