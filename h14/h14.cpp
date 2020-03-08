@@ -14,27 +14,33 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 #include "h14.h"
 
 // Define your functions here
-string getLine(const std::string& prompt)
+string getLine(const string& prompt)
 {
     string result;
 
+
+    if (!isspace(prompt.back()))
+    {
+        cout << prompt << ' ';
+    }
+
     return result;
 }
-int getInt(const std::string& prompt)
+int getInt(const string& prompt)
 {
     int result{};
 
     return result;
 
 }
-double getReal(const std::string& prompt)
+double getReal(const string& prompt)
 {
     double result{};
 
     return result;
 
 }
-bool getYN(const std::string& prompt)
+bool getYN(const string& prompt)
 {
     bool result{};
 
