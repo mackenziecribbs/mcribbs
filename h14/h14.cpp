@@ -88,9 +88,31 @@ double getReal(const string& prompt)
 }
 bool getYN(const string& prompt)
 {
-    bool result{};
+    string result;
+    bool compare = false;
+    result = getLine(prompt);
+    while (true)
+    {
+        if (!result.empty())
+        {
+            if (result.front() == 'Y' || result.front() == 'y' || result.front() == 'N' || result.front() == 'n')
+            {
+                if (result.front() == 'Y' || result.front() == 'y')
+                {
+                    compare = true;
+                    return compare;
+                }
+                else
+                {
+                    return compare;
 
-    return result;
+                }
+            }
+
+        }
+    }
+
+
 
 }
 
