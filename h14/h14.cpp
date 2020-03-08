@@ -22,11 +22,7 @@ string getLine(const string& prompt)
     {
         cout << prompt << ' ';
     }
-    else if (prompt.empty())
-    {
-        cout << "";
-    }
-    else
+    else if(!prompt.empty())
     {
         cout << prompt;
     }
