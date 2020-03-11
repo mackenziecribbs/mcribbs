@@ -1,7 +1,7 @@
 /**
     @file h16.h
-    @author YOUR NAME HERE
-    @date what day and meeting time
+    @author Mackenzie Cribbs
+    @date Spring 2020
     Declarations for CS 150 Homework
 */
 #ifndef H16_H_
@@ -14,7 +14,11 @@
 #include <sstream>
 
 // Place your Point structure definitions here
-
+struct Point
+{
+    int x;
+    int y;
+}
 
 // Place your Triangle structure definitions here
 

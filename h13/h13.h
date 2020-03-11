@@ -1,5 +1,5 @@
-#ifndef h13_H_
-#define h13_H_
+#ifndef H13_H_
+#define H13_H_
 /**
     @file h13.h
     @author Mackenzie Cribbs
@@ -8,5 +8,5 @@
 #include <string>
 
 // Prototypes
-string dataSets();
+string dataSets(const std::string& in);
 #endif
