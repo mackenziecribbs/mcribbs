@@ -27,6 +27,9 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             break;
         }
+        //in >> word >> ws
+        //word = clean(word);
+
 
     }
 
