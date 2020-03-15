@@ -16,7 +16,12 @@ string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 #include "h18.h"
 
 // Place your function here
+vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
+{
+    vector<Word> results;
 
+    return results;
+}
 
 
 /////////////// STUDENT TESTING ////////////////////
