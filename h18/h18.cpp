@@ -27,9 +27,32 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             break;
         }
-        //in >> word >> ws
-        //word = clean(word);
+        in >> wordcheck >> ws;
 
+        int len = wordcheck.size();
+        string temp = "";
+        for(int i = 0; i < len; i++)
+        {
+            if (!ispunct(wordcheck.at(i)))
+            {
+                temp += wordcheck.at(i);
+            }
+            else if (isupper(wordcheck.at(i)))
+            {
+                temp += tolower(wordcheck.at(i));
+            }
+            else
+            {
+                temp += wordcheck.at(i);
+            }
+        }
+        wordcheck = temp;
+
+        // if(in.find(word, results))
+        // {
+        //     position
+        //     continue;
+        // }
 
     }
 
