@@ -19,14 +19,17 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 // Implement the function here
 vector<string> fileToWords(const string& filename)
 {
-    ifstream infile{filename};
-    if (infile.fail())
+    ifstream in{filename};
+    if (in.fail())
     {
         throw invalid_argument(filename + " not valid.");
     }
-
     vector<string> results;
-
+    string test = "";
+    while (getline(in, test))
+    {
+        results.push_back(test);
+    }
     return results;
 }
 
