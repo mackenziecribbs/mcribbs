@@ -19,6 +19,17 @@ string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
     vector<Word> results;
+    string wordcheck = "";
+    while(getline(in, wordcheck))
+    {
+        int position = in.tellg();
+        if (position == -1)
+        {
+            break;
+        }
+
+    }
+
 
     return results;
 }
