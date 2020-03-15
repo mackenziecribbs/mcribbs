@@ -1,6 +1,6 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h17.cpp
  */
 #include <iostream>
@@ -11,13 +11,24 @@
 #include <cctype>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 
 #include "h17.h"
 
 // Implement the function here
+vector<string> fileToWords(const string& filename)
+{
+    //ifstream infile{filename};
+    //if (infile.fail())
+    //{
+        //throw
+    //}
 
+    vector<string> results;
+
+    return results;
+}
 
 
 
