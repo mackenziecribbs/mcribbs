@@ -53,35 +53,42 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         in >> wd >> ws;
 
         wd = clean(wd); // returns lower case
-
-        int resultslen = results.size();
-
-        for (int i = 0; i < resultslen; i++)
+        try
         {
-            if (wd == results.at(i).word)
-            {
+            int resultslen = results.size();
 
-                results.at(i).positions.push_back(current_pos);
+            for (int i = 0; i < resultslen; i++)
+            {
+                if (wd == results.at(i).word)
+                {
+
+                    results.at(i).positions.push_back(current_pos);
+                    throw 1;
+                }
+            }
+
+
+            int excludelen = excluded.size();
+            for (int i = 0; i < excludelen; i++)
+            {
+                if (wd == excluded.at(i))
+                {
+                    throw 1;
+                }
+            }
+            int dictlen = dictionary.size();
+            for (int i = 0; i < dictlen; i++)
+            {
+                if (wd == dictionary.at(i))
+                {
+                    throw 1;
+                }
+
             }
         }
-
-
-        int excludelen = excluded.size();
-        for (int i = 0; i < excludelen; i++)
+        catch (int cont)
         {
-            if (wd == excluded.at(i))
-            {
-                continue;
-            }
-        }
-        int dictlen = dictionary.size();
-        for (int i = 0; i < dictlen; i++)
-        {
-            if (wd == dictionary.at(i))
-            {
-                continue;
-            }
-
+            continue;
         }
 
         //Word result
