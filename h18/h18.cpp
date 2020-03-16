@@ -26,14 +26,6 @@ string clean(const string& wd)
         {
             temp += tolower(wd.at(i));
         }
-        // else if (isupper(wd.at(i)))
-        // {
-        //     temp += tolower(wd.at(i));
-        // }
-        // else
-        // {
-        //     temp += wd.at(i);
-        // }
     }
     return temp;
 }
@@ -89,8 +81,6 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             continue;
         }
-
-        //vector<pos_type> pos{current_pos};
         Word test;
         test.word = wd;
         test.positions = {current_pos};
