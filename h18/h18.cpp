@@ -86,12 +86,14 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
 
             }
         }
-        catch (int cont)
+        catch (...)
         {
             continue;
         }
 
-        //Word result
+        vector<pos_type> pos{current_pos};
+        Word test = {wd, pos};
+        results.push_back(test);
 
     }
 
