@@ -22,8 +22,8 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
     string word = "";
     while(!in.eof())
     {
-        int position = in.tellg();
-        if (position == -1)
+        int current_pos = in.tellg();
+        if (current_pos == -1)
         {
             break;
         }
@@ -47,14 +47,19 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             }
         }
         word = temp;
-        //string compare = "";
-        // while(getline(results, compare))
-        // {
-        //     if(compare == word)
-        //     {
-        //         results[0] == position;
-        //     }
-        // }
+
+        int resultslen = results.size();
+
+        for (int i = 0; i < resultslen; i++)
+        {
+            if (word == results.at(i).word)
+            {
+
+                results.at(i).positions.push_back(current_pos);
+            }
+        }
+
+
         int excludelen = excluded.size();
         for (int i = 0; i < excludelen; i++)
         {
