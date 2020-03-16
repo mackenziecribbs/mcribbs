@@ -91,8 +91,11 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
             continue;
         }
 
-        vector<pos_type> pos{current_pos};
-        Word test = {wd, pos};
+        //vector<pos_type> pos{current_pos};
+        Word test;
+        test.word = wd;
+        test.positions = {current_pos};
+
         results.push_back(test);
 
     }
