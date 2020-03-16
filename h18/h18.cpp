@@ -19,7 +19,7 @@ string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 string clean(const string& wd)
 {
     int len = wd.size();
-    string temp = wd;
+    string temp = "";
     for(int i = 0; i < len; i++)
     {
         if (!ispunct(wd.at(i)))
