@@ -24,16 +24,16 @@ string clean(const string& wd)
     {
         if (!ispunct(wd.at(i)))
         {
-            temp += wd.at(i);
-        }
-        else if (isupper(wd.at(i)))
-        {
             temp += tolower(wd.at(i));
         }
-        else
-        {
-            temp += wd.at(i);
-        }
+        // else if (isupper(wd.at(i)))
+        // {
+        //     temp += tolower(wd.at(i));
+        // }
+        // else
+        // {
+        //     temp += wd.at(i);
+        // }
     }
     wd == temp;
     return wd;
