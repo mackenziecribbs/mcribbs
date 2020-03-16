@@ -20,7 +20,7 @@ string clean(const string& wd)
 {
     int len = wd.size();
     string temp = "";
-    for(int i = 0; i < len; i++)
+    for(int i = 0; i < len; i++) // for (const auto& c : temp) another way to write it
     {
         if (!ispunct(wd.at(i)))
         {
@@ -36,12 +36,12 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
     while(!in.eof())
     {
         int current_pos = in.tellg();
-        if (current_pos == -1)
+        if (current_pos == -1) // if the input stream is empty, break out of while loop
         {
             break;
         }
         string wd = "";
-        in >> wd >> ws;
+        in >> wd >> ws; // sets wd to the input stream and then skips white space
 
         wd = clean(wd); // returns lower case
         try
@@ -81,11 +81,11 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             continue;
         }
-        Word test;
-        test.word = wd;
-        test.positions = {current_pos};
+        Word test; // Making a new variable of the type Word (which takes in 2 outputs: word and position)
+        test.word = wd; // sets the Word word to the input stream wd
+        test.positions = {current_pos}; // sets the Word positions to the input stream position
 
-        results.push_back(test);
+        results.push_back(test); // puts both Word word and positions to results
 
     }
 
@@ -100,20 +100,20 @@ vector<string> fileToWords(const string& filename);
 int run()
 {
     cout << "Student testing" << endl;
-    // vector<string> dictionary = fileToWords("words");
-    // vector<string> ignore = fileToWords("excluded.txt");
-    // istringstream words("Now is the tyme for all good studunts to "
-    //     "come to the aiid of their ai!id classmaates.");
-    // vector<Word> misspelled = spellCheck(words, dictionary, ignore);
-    // cout << "Misspelled words" << endl;
-    // int i{1};
-    // for (const auto& e : misspelled)
-    // {
-    //     cout << setw(4) << i++ << ". " << e.word << ", [ ";
-    //     for (auto pos : e.positions)
-    //         cout << pos << " ";
-    //     cout << "]" << endl;
-    // }
+    vector<string> dictionary = fileToWords("words");
+    vector<string> ignore = fileToWords("excluded.txt");
+    istringstream words("Now is the tyme for all good studunts to "
+        "come to the aiid of their ai!id classmaates.");
+    vector<Word> misspelled = spellCheck(words, dictionary, ignore);
+    cout << "Misspelled words" << endl;
+    int i{1};
+    for (const auto& e : misspelled)
+    {
+        cout << setw(4) << i++ << ". " << e.word << ", [ ";
+        for (auto pos : e.positions)
+            cout << pos << " ";
+        cout << "]" << endl;
+    }
 
     return 0;
 }
