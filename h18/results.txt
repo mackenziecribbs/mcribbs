@@ -1,4 +1,4 @@
-TESTING H18--WHO AM I?
+TESTING H18--mcribbs
 ----------------------------------------------------------------------
 Checking function: spellCheck; Check number found. -------------------
    + some examples with only correct words->0: Success
@@ -32,6 +32,6 @@ Checking function: spellCheck; Multiple misspellings. -------------------
   Tests passing 3/3 (100%).
 
 ----------------------------------------------------------------------
-H18:WHO AM I?:ALL TESTS -- PASS 15/15 (100%).
+H18:mcribbs:ALL TESTS -- PASS 15/15 (100%).
 ----------------------------------------------------------------------
-MTU4NDMyOTcxMzpXSE8gQU0gST86SDE4OjEwMC4wMCU=
+MTU4NDMzOTM3MTptY3JpYmJzOkgxODoxMDAuMDAl
