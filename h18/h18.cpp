@@ -35,8 +35,7 @@ string clean(const string& wd)
         //     temp += wd.at(i);
         // }
     }
-    wd == temp;
-    return wd;
+    return temp;
 }
 
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
