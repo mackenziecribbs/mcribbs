@@ -19,40 +19,59 @@ string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
     vector<Word> results;
-    string wordcheck = "";
-    while(getline(in, wordcheck))
+    string word = "";
+    while(!in.eof())
     {
         int position = in.tellg();
         if (position == -1)
         {
             break;
         }
-        in >> wordcheck >> ws;
+        in >> word >> ws;
 
-        int len = wordcheck.size();
+        int len = word.size();
         string temp = "";
         for(int i = 0; i < len; i++)
         {
-            if (!ispunct(wordcheck.at(i)))
+            if (!ispunct(word.at(i)))
             {
-                temp += wordcheck.at(i);
+                temp += word.at(i);
             }
-            else if (isupper(wordcheck.at(i)))
+            else if (isupper(word.at(i)))
             {
-                temp += tolower(wordcheck.at(i));
+                temp += tolower(word.at(i));
             }
             else
             {
-                temp += wordcheck.at(i);
+                temp += word.at(i);
             }
         }
-        wordcheck = temp;
-
-        // if(in.find(word, results))
+        word = temp;
+        //string compare = "";
+        // while(getline(results, compare))
         // {
-        //     position
-        //     continue;
+        //     if(compare == word)
+        //     {
+        //         results[0] == position;
+        //     }
         // }
+        int excludelen = excluded.size();
+        for (int i = 0; i < excludelen; i++)
+        {
+            if (word == excluded.at(i))
+            {
+                continue;
+            }
+        }
+        int dictlen = dictionary.size();
+        for (int i = 0; i < dictlen; i++)
+        {
+            if (word == dictionary.at(i))
+            {
+                continue;
+            }
+
+        }
 
     }
 
