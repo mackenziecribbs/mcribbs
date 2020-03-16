@@ -16,10 +16,32 @@ string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 #include "h18.h"
 
 // Place your function here
+string clean(const string& wd)
+{
+    int len = wd.size();
+    string temp = wd;
+    for(int i = 0; i < len; i++)
+    {
+        if (!ispunct(wd.at(i)))
+        {
+            temp += wd.at(i);
+        }
+        else if (isupper(wd.at(i)))
+        {
+            temp += tolower(wd.at(i));
+        }
+        else
+        {
+            temp += wd.at(i);
+        }
+    }
+    wd == temp;
+    return wd;
+}
+
 vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vector<string>& excluded)
 {
     vector<Word> results;
-    string word = "";
     while(!in.eof())
     {
         int current_pos = in.tellg();
@@ -27,32 +49,16 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         {
             break;
         }
-        in >> word >> ws;
+        string wd = "";
+        in >> wd >> ws;
 
-        int len = word.size();
-        string temp = "";
-        for(int i = 0; i < len; i++)
-        {
-            if (!ispunct(word.at(i)))
-            {
-                temp += word.at(i);
-            }
-            else if (isupper(word.at(i)))
-            {
-                temp += tolower(word.at(i));
-            }
-            else
-            {
-                temp += word.at(i);
-            }
-        }
-        word = temp;
+        wd = clean(wd); // returns lower case
 
         int resultslen = results.size();
 
         for (int i = 0; i < resultslen; i++)
         {
-            if (word == results.at(i).word)
+            if (wd == results.at(i).word)
             {
 
                 results.at(i).positions.push_back(current_pos);
@@ -63,7 +69,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         int excludelen = excluded.size();
         for (int i = 0; i < excludelen; i++)
         {
-            if (word == excluded.at(i))
+            if (wd == excluded.at(i))
             {
                 continue;
             }
@@ -71,19 +77,20 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         int dictlen = dictionary.size();
         for (int i = 0; i < dictlen; i++)
         {
-            if (word == dictionary.at(i))
+            if (wd == dictionary.at(i))
             {
                 continue;
             }
 
         }
 
+        //Word result
+
     }
 
 
     return results;
 }
-
 
 /////////////// STUDENT TESTING ////////////////////
 vector<string> fileToWords(const string& filename);
