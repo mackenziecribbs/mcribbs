@@ -12,7 +12,10 @@ string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 #include "h20.h"
 
 // Add your code here
+void greenScreen(unsigned char * const img, int width, int height)
+{
 
+}
 
 
 
