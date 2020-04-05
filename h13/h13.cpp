@@ -1,6 +1,6 @@
 /**
- *  @author Mackenzie Cribbs
- *  @date Spring 2020
+ *  @author Put your name here
+ *  @date Put the date here
  *  @file h13.cpp
  */
 #include <string>
@@ -10,53 +10,50 @@
 #include <iomanip>
 using namespace std;
 
-string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
+string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
 
 #include "h13.h"
 
 // Implement your function here
-string dataSets(const string& in)
+string dataSets(const string& fname)
 {
-    string result = "";
-    ifstream infile{in};
-    if (infile.fail())
-    {
-        return "data/notfound.txt cannot be opened.";
-
-    }
-
-    //Initialization
-    int dataSet{1};
-    int repeat;
+    string result;
+    ifstream in(fname);
+    if (in.fail()) { return fname + " cannot be opened."; }
     ostringstream out;
-
-    infile >> repeat;
-    while(!infile.fail())
+    out << fixed << setprecision(4);
+    // 3 4.5 2 9.8 7 4.5 0 4 2.7 5 3.9 0 2 3.2 4 7.1 0
+    int dataset = 1;
+    int repeat;
+    in >> repeat;
+    while (! in.fail())
     {
-    double sum{};
-    int count{};
-        while(repeat != 0)
+        double sum = 0.0;
+        int count = 0;
+        while (repeat != 0)
         {
             double value;
-            infile >> value;
+            in >> value;
             count += repeat;
             sum += repeat * value;
-            infile >> repeat;
+            in >> repeat;
         }
-
-        if (dataSet > 1)
-        {
-            out << "\n";
-        }
-
-        out << fixed << setprecision(4) << "data set " << dataSet << ": total values = " << to_string(count) << "\n" << "average value = " << (sum/count) << "\n";
-        dataSet++;
-        infile >> repeat;
+        // result += "data set " + to_string(dataset)
+        //     + ": total values = " + to_string(count)
+        //     + "\naverage value = " + to_string(sum / count)
+        //     + "\n\n";
+        if (dataset > 1) out << endl;
+        out << "data set " << dataset << ": total values = " << count << endl
+            << "average value = " << (sum / count) << endl;
+        dataset++;
+        in >> repeat;
     }
-
-    return out.str();
+    result = out.str();
+    return result;
 }
 
+// data set 1: total values = 9
+//
 
 
 ///////////////// Student Testing /////////////////////////

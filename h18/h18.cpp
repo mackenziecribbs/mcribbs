@@ -47,7 +47,7 @@ vector<Word> spellCheck(istream& in, const vector<string>& dictionary, const vec
         try
         {
             int resultslen = results.size();
-
+ 
             for (int i = 0; i < resultslen; i++)
             {
                 if (wd == results.at(i).word)

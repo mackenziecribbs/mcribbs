@@ -28,4 +28,6 @@ std::vector<Word> spellCheck(std::istream& in,
                     const std::vector<std::string>& dictionary,
                     const std::vector<std::string>& excluded);
 
+//std::string clean(const std::string wd);
+
 #endif
