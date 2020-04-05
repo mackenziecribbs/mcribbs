@@ -1,0 +1,14 @@
+TESTING H20--WHO AM I?
+----------------------------------------------------------------------
+Checking function: greenScreen -------------------
+   + greenScreen worked correctly for images/ReyGreenScreen.png
+   + greenScreen worked correctly for images/lego.png
+   + greenScreen worked correctly for images/cpp.jpg
+   + greenScreen worked correctly for images/fence-ivy.jpg
+----------------------------------------------------------------------
+  Tests passing 4/4 (100%).
+
+----------------------------------------------------------------------
+H20:WHO AM I?:ALL TESTS -- PASS 4/4 (100%).
+----------------------------------------------------------------------
+MTU4NjEyODI1MjpXSE8gQU0gST86SDIwOjEwMC4wMCU=
