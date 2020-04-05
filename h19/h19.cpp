@@ -7,13 +7,30 @@
 #include <iostream>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 
 #include "h19.h"
 
 // Add your code here
+void negative(unsigned char * const img, int width, int height)
+{
+    unsigned char * p = img; // can use p to change img
+    int BPP = 4;
+    const auto * end = img + width * height * BPP;
+    while (p != end)
+    {
+       *p = 255 - *p;
+       p++;
+       *p = 255 - *p;
+       p++;
+       *p = 255 - *p;
+       p++;
+       p++;
 
+
+    }
+}
 
 
 /////////////// STUDENT TESTING ////////////////////
