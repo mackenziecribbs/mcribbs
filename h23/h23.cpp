@@ -32,6 +32,26 @@ int alternatingSum(const int a[], size_t size)
 MinMax minMax(const double *ptr, size_t size)
 {
     MinMax result;
+    if (size > 0)
+    {
+        double largest = *ptr;
+        double smallest = *ptr;
+        result.min = ptr;
+        result.max = ptr;
+        for (size_t i = 1; i < size; ++i)
+        {
+            if (ptr[i] > largest)
+            {
+                largest = ptr[i];
+                result.max = &ptr[i]; // (ptr + 1);
+            }
+            else if (ptr[i] < smallest)
+            {
+                smallest = ptr[i];
+                result.min = &ptr[i];
+            }
+        }
+    }
     return result;
 }
 
