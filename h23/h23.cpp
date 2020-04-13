@@ -14,7 +14,19 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 // Add your code here
 int alternatingSum(const int a[], size_t size)
 {
-    return 0;
+    int altSum = 0;
+    for (size_t i = 0; i < size; ++i)
+    {
+        if (a[i] % 2 == 0)
+        {
+            altSum += a[i];
+        }
+        else
+        {
+            altSum -= a[i];
+        }
+    }
+    return altSum;
 }
 
 MinMax minMax(const double *ptr, size_t size)
