@@ -1,20 +1,56 @@
 /**
- *  @author Put your name here
- *  @date Put the date here
+ *  @author Mackenzie Cribbs
+ *  @date Spring 2020
  *  @file h22.cpp
  */
 #include <string>
 #include <iostream>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 #include "h22.h"
 
 // Add your code here
+void flip(UC* const img, int width, int height, Direction dir)
+{
+    if (dir == Direction::LtoR || dir == Direction::RtoL)
+    {
+        for (int row = 0; row < height; ++row)
+        {
+            Pixel * front = reinterpret_cast<Pixel*>(img) + row * width; // allows the img to be a different kind of pointer
+            Pixel * back = front + width - 1; // last pixel
+            while (front < back)
+            {
+                auto temp = *front;
+                *front = *back;
+                *back = temp;
+                front++;
+                back--;
+            }
+        }
+    }
+    else // top to bottom or vice-versa
+    {
+        for (int col = 0; col < width; ++col)
+        {
+            Pixel * top = reinterpret_cast<Pixel*>(img) + col;
+            Pixel * bottom = top + width * (height - 1);
+            while (top < bottom)
+            {
+                auto temp = *top; // swap alg
+                *top = *bottom;
+                *bottom = temp;
+                top += width;
+                bottom -= width;
+            }
+        }
+    }
+}
+void mirror(UC* const img, int width, int height, Direction dir)
+{
 
-
-
+}
 
 /////////////// STUDENT TESTING ////////////////////
 
