@@ -9,14 +9,14 @@ Checking function: flip -------------------
   Tests passing 4/4 (100%).
 
 Checking function: mirror -------------------
-   X mirror failed for images/stegosaurus.png
-   X mirror failed for images/stegosaurus.png
-   X mirror failed for images/stegosaurus.png
-   X mirror failed for images/stegosaurus.png
+   + mirror worked correctly for images/stegosaurus.png
+   + mirror worked correctly for images/stegosaurus.png
+   + mirror worked correctly for images/stegosaurus.png
+   + mirror worked correctly for images/stegosaurus.png
 ----------------------------------------------------------------------
-  Tests passing 0/4 (0%).
+  Tests passing 4/4 (100%).
 
 ----------------------------------------------------------------------
-H22:mcribbs:ALL TESTS -- PASS 4/8 (50%).
+H22:mcribbs:ALL TESTS -- PASS 8/8 (100%).
 ----------------------------------------------------------------------
-MTU4Njc0OTQxNjptY3JpYmJzOkgyMjo1MC4wMCU=
+MTU4Njc0OTc1MDptY3JpYmJzOkgyMjoxMDAuMDAl
