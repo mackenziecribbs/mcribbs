@@ -55,6 +55,15 @@ void copyEvens(const int a[], size_t aSize, int b[], size_t& bSize)
     {
         throw length_error("b not large enough");
     }
+    bSize = 0;
+    for (size_t i = 0; i < aSize; ++i)
+    {
+        if (a[i] % 2 == 0)
+        {
+            b[bSize] = a[i];
+            bSize++;
+        }
+    }
 }
 
 
