@@ -51,7 +51,10 @@ bool sameSet(const int *aBeg, const int *aEnd, const int *bBeg, const int *bEnd)
 
 void copyEvens(const int a[], size_t aSize, int b[], size_t& bSize)
 {
-
+    if (bSize < aSize)
+    {
+        throw length_error("b not large enough");
+    }
 }
 
 
