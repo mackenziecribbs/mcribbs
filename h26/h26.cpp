@@ -31,6 +31,17 @@ FlexArray& readData(std::istream& in, FlexArray& a)
     int num;
     while (in >> num)
     {
+        if (a.size_ >= capacity)
+        {
+            // expand;
+            capacity *= 2;
+            unique_ptr<int[]> tmp{new int[capacity]};
+            for (size_t i = 0; i < a.size_; ++i)
+            {
+                tmp[i] = a.data_[i];
+            }
+            a.data_.reset(tmp.release());
+        }
         a.data_[a.size_] = num;
         a.size_++;
     }
