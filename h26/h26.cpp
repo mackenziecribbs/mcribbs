@@ -1,5 +1,5 @@
 /**
- *  @author Put your name here
+ *  @author Mackenzie Cribbs
  *  @date Put the date here
  *  @file h26.cpp
  */
@@ -8,11 +8,36 @@
 #include <memory>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 #include "h26.h"
 // Add your code here
+/**
+ * Read integers from a stream into a FlexArray.
+ * @param[in] in the stream to read from.
+ * @param[out] the FlexArray to store the data in
+ * @return a reference to the modified FlexArray
+ * @post size_ will contain the number of elements
+ * @post data_ will contain exactly size_ elements
+ * @post in will be at end of file or a non-integer
+ */
+FlexArray& readData(std::istream& in, FlexArray& a)
+{
+    return a;
+}
 
+
+/**
+ * Return a string representation of a FlexArray.
+ * @param a the array to represent.
+ * @return a comma separated, brace delimited contents.
+ */
+string toString(const FlexArray& a)
+{
+    string result;
+
+    return result;
+}
 
 //////////////////////// STUDENT TESTING //////////////////////////
 #include <iostream>
