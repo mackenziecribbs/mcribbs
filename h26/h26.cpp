@@ -45,6 +45,14 @@ FlexArray& readData(std::istream& in, FlexArray& a)
         a.data_[a.size_] = num;
         a.size_++;
     }
+
+    unique_ptr<int[]> tmp{new int[a.size_]};
+    for (size_t i = 0; i < a.size_; ++i)
+    {
+        tmp[i] = a.data_[i];
+    }
+
+    a.data_.reset(tmp.release());
     return a;
 }
 
