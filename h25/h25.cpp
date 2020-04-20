@@ -14,7 +14,24 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 // Add your code here
 void reverse(char * s)
 {
-    
+    char * p = s;
+    char * end = p;
+    while (*end != '\0')
+    {
+        end++;
+    }
+    end--;
+
+    while (p < end)
+    {
+        //swap algorithm
+        char temp = *p;
+        *p = *end;
+        *end = temp;
+
+        p++;
+        end--;
+    }
 }
 const char * findStr(const char *str1, const char *str2)
 {
