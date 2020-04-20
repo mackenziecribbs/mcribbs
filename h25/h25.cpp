@@ -38,11 +38,11 @@ const char * findStr(const char *str1, const char *str2)
     const char * p1 = str1;
     while (*p1 != '\0')
     {
-        //const char * p2 = p1;
+        const char * p2 = p1;
         const char * p3 = str2;
-        while (*p3 != '\0' && *p1 == *p3 && *p1 != '\0')
+        while (*p3 != '\0' && *p2 == *p3 && *p1 != '\0')
         {
-          p1++;
+          p2++;
           p3++;
         }
         if (*p3 == '\0')
