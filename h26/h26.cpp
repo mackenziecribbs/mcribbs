@@ -23,6 +23,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
  */
 FlexArray& readData(std::istream& in, FlexArray& a)
 {
+    // initialize a
+    a.size_ = 0;
+    size_t capacity = INITIAL_CAPACITY;
+    a.data_.reset(new int[capacity]);
     return a;
 }
 
