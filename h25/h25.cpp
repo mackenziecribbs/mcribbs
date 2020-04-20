@@ -49,7 +49,7 @@ const char * findStr(const char *str1, const char *str2)
         {
             return p1;
         }
-        //p1++;
+        p1++;
     }
 
 
