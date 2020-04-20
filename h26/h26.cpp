@@ -27,6 +27,13 @@ FlexArray& readData(std::istream& in, FlexArray& a)
     a.size_ = 0;
     size_t capacity = INITIAL_CAPACITY;
     a.data_.reset(new int[capacity]);
+
+    int num;
+    while (in >> num)
+    {
+        a.data_[a.size_] = num;
+        a.size_++;
+    }
     return a;
 }
 
