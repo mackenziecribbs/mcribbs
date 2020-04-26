@@ -1,5 +1,5 @@
 /**
- *  @author Put your name here
+ *  @author Mackenzie Cribbs
  *  @date Put the date here
  *  @file h29.cpp
  */
@@ -8,11 +8,55 @@
 #include <stdexcept>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 #include "h29.h"
 
 // Add your code here
 
+Image::Image(const std::string& path)
+{
+
+}
+Image::Image(unsigned width, unsigned height)
+{
+
+}
+
+unsigned Image::width() const
+{
+    return 1;
+}
+unsigned Image::height() const
+{
+    return 1;
+}
+unsigned Image::size() const
+{
+    return 1;
+}
+
+Pixel* Image::begin()
+{
+    return nullptr;
+}
+Pixel* Image::end()
+{
+    return nullptr;
+}
+
+void Image::fill(const Pixel& color)
+{
+
+}
+
+bool Image::load(const std::string& path)
+{
+    return false;
+}
+bool Image::save(const std::string& path)
+{
+    return false;
+}
 
 
 //////////////////////// STUDENT TESTING //////////////////////////
