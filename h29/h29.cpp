@@ -21,15 +21,15 @@ Image::Image(unsigned width, unsigned height) : m_width(width), m_height(height)
 
 unsigned Image::width() const
 {
-    return 1;
+    return m_width;
 }
 unsigned Image::height() const
 {
-    return 1;
+    return m_height;
 }
 unsigned Image::size() const
 {
-    return 1;
+    return m_pixels.size();
 }
 
 Pixel* Image::begin()
