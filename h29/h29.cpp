@@ -17,10 +17,7 @@ Image::Image(const std::string& path)
 {
 
 }
-Image::Image(unsigned width, unsigned height)
-{
-
-}
+Image::Image(unsigned width, unsigned height) : m_width(width), m_height(height), m_pixels(width * height) {}
 
 unsigned Image::width() const
 {
