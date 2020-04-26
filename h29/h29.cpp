@@ -43,7 +43,7 @@ Pixel* Image::end()
 
 void Image::fill(const Pixel& color)
 {
-
+    for (auto& p : m_pixels) p = color;
 }
 
 bool Image::load(const std::string& path)
