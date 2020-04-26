@@ -6,13 +6,32 @@
 #include <string>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 #include "h28.h"
 
 // Implement your class here
-
-
+Employee::Employee()                                         // default: salary 0
+{
+    m_salary = 0;
+}
+Employee::Employee(const string& name, double salary)   // working constructor
+{
+    m_data = Person(name, 0);
+    m_salary = salary;
+}
+void Employee::salary(double newSalary)                     // change salary
+{
+    m_salary = newSalary;
+}
+double Employee::salary() const                             // retreive salary
+{
+    return m_salary;
+}
+string Employee::name() const                           // retrieve name
+{
+    return m_data.name();
+}
 
 
 
