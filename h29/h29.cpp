@@ -40,7 +40,23 @@ void Image::fill(const Pixel& color)
 
 bool Image::load(const std::string& path)
 {
-    return false;
+    const int BPP = 4;
+    int w, h, bpp;
+    UC* temp = stbi_load(path.c_str(), &w, &h, &bpp, BPP);
+    if (temp == nullptr)
+    {
+        return false;
+    }
+    Pixel * data = reinterpret_cast<Pixel*>(temp);
+    m_width = w;
+    m_height = h;
+    m_pixels.resize(w * h);
+    for (size_t i = 0, len = m_pixels.size();  i < len; ++i)
+    {
+        m_pixels[i] = data[i];
+    }
+    stbi_image_free(temp);
+    return true;
 }
 bool Image::save(const std::string& path)
 {
