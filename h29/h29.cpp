@@ -43,10 +43,9 @@ bool Image::load(const std::string& path)
     const int BPP = 4;
     int w, h, bpp;
     UC* temp = stbi_load(path.c_str(), &w, &h, &bpp, BPP);
-    if (temp == nullptr)
-    {
-        return false;
-    }
+
+    if (temp == nullptr) return false;
+
     Pixel * data = reinterpret_cast<Pixel*>(temp);
     m_width = w;
     m_height = h;
