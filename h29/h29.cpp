@@ -60,6 +60,22 @@ bool Image::load(const std::string& path)
 }
 bool Image::save(const std::string& path)
 {
+    auto pos = path.rfind(".");
+    if (pos == string::npos) return false;
+    string ext = path.substr(pos);
+
+    for (auto& e : ext) e = tolower(e);
+
+    if (ext == ".jpg")
+        return stbi_write_jpg(path.c_str(), width(), height(), 4,
+            reinterpret_cast<UC*>(&m_pixels.front()), 100);
+    else if (ext == ".bmp")
+        return stbi_write_bmp(path.c_str(), width(), height(), 4,
+            reinterpret_cast<UC*>(&m_pixels.front()));
+    else if (ext == ".png")
+        return stbi_write_png(path.c_str(), width(), height(), 4,
+            reinterpret_cast<UC*>(&m_pixels.front()), width() * 4);
+
     return false;
 }
 
