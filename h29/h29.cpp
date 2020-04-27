@@ -13,10 +13,7 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Add your code here
 
-Image::Image(const std::string& path)
-{
-
-}
+Image::Image(const std::string& path) {}
 Image::Image(unsigned width, unsigned height) : m_width(width), m_height(height), m_pixels(width * height) {}
 
 unsigned Image::width() const
@@ -32,14 +29,9 @@ unsigned Image::size() const
     return m_pixels.size();
 }
 
-Pixel* Image::begin()
-{
-    return nullptr;
-}
-Pixel* Image::end()
-{
-    return nullptr;
-}
+Pixel* Image::begin() { if (size() > 0) return &m_pixels.front(); return nullptr; }
+
+Pixel* Image::end() { if (size() > 0) return begin() + size(); return nullptr; }
 
 void Image::fill(const Pixel& color)
 {
