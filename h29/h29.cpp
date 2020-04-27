@@ -13,7 +13,7 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Add your code here
 
-Image::Image(const std::string& path) {}
+Image::Image(const std::string& path) { load(path); }
 Image::Image(unsigned width, unsigned height) : m_width(width), m_height(height), m_pixels(width * height) {}
 
 unsigned Image::width() const
@@ -55,6 +55,7 @@ bool Image::load(const std::string& path)
         m_pixels[i] = data[i];
     }
     stbi_image_free(temp);
+
     return true;
 }
 bool Image::save(const std::string& path)
