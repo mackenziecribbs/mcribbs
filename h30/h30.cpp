@@ -64,6 +64,7 @@ std::string Fraction::toString() const
 
 std::ostream& operator<<(std::ostream& out, const Fraction& f)
 {
+    out << f.toString();
     return out;
 }
 
@@ -79,14 +80,15 @@ const Fraction operator/(const Fraction& lhs, const Fraction& rhs) { return lhs;
 int run()
 {
     cout << "Uncomment these and use make run to test." << endl;
-    // Fraction a(3, 6); // 1/2 after reducing
-    // Fraction b(1, 3); // 1/3
-    // Fraction c(1, 6); // 1/6
+    Fraction a(3, 6); // 1/2 after reducing
+    cout << "a->" << a << endl;
+    Fraction b(1, 3); // 1/3
+    Fraction c(1, 6); // 1/6
 
-    // Fraction sum = a + b + c;
+    Fraction sum = a + b + c;
 
-    // cout << a << " + " << b << " + " << c
-    //     << " = " << sum << endl;
+    cout << a << " + " << b << " + " << c
+        << " = " << sum << endl;
 
     return 0;
 }
