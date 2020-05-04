@@ -49,9 +49,37 @@ Fraction& Fraction::operator+=(const Fraction& rhs)
     return *this;
 
 }
-Fraction& Fraction::operator-=(const Fraction& rhs) { return *this; }
-Fraction& Fraction::operator*=(const Fraction& rhs) { return *this; }
-Fraction& Fraction::operator/=(const Fraction& rhs) { return *this; }
+Fraction& Fraction::operator-=(const Fraction& rhs)
+{
+   {
+    auto a = numerator_;
+    auto b = denominator_;
+    auto c = rhs.numerator_;
+    auto d = rhs.denominator_;
+    *this = Fraction(a*d - b*c, b*d );
+    return *this;
+}
+
+}
+Fraction& Fraction::operator*=(const Fraction& rhs)
+{
+    auto a = numerator_;
+    auto b = denominator_;
+    auto c = rhs.numerator_;
+    auto d = rhs.denominator_;
+    *this = Fraction(a*c, b*d );
+    return *this;
+
+}
+Fraction& Fraction::operator/=(const Fraction& rhs)
+{
+    auto a = numerator_;
+    auto b = denominator_;
+    auto c = rhs.numerator_;
+    auto d = rhs.denominator_;
+    *this = Fraction(a*d, b*c );
+    return *this;
+}
 
 std::string Fraction::toString() const
 {
