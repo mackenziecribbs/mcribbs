@@ -1,18 +1,44 @@
 /**
  *  @file h30.cpp
- *  @author Put your name here
+ *  @author Mackenzie Cribbs
  *  @version Put the semester and meeting time here
  */
 #include <string>
 #include <stdexcept>
 using namespace std;
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 #include "h30.h"
 
 // Implement your class members here
 
+Fraction::Fraction(int n) : numerator_(n), denominator_(1) {}
+Fraction::Fraction(int n, int d)
+{
+
+}
+
+Fraction& Fraction::operator+=(const Fraction& rhs) { return *this; }
+Fraction& Fraction::operator-=(const Fraction& rhs) { return *this; }
+Fraction& Fraction::operator*=(const Fraction& rhs) { return *this; }
+Fraction& Fraction::operator/=(const Fraction& rhs) { return *this; }
+
+std::string Fraction::toString() const
+{
+    return "not implemented";
+}
+
+
+std::ostream& operator<<(std::ostream& out, const Fraction& f)
+{
+    return out;
+}
+
+const Fraction operator+(const Fraction& lhs, const Fraction& rhs) { return lhs; }
+const Fraction operator-(const Fraction& lhs, const Fraction& rhs) { return lhs; }
+const Fraction operator*(const Fraction& lhs, const Fraction& rhs) { return lhs; }
+const Fraction operator/(const Fraction& lhs, const Fraction& rhs) { return lhs; }
 
 
 
