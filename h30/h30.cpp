@@ -12,12 +12,31 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 #include "h30.h"
 
 // Implement your class members here
-
+static int gcd(int x, int y)
+{
+    int r = x % y;
+    while (r != 0)
+    {
+        x = y;
+        y = r;
+        r = x % y;
+    }
+    return y;
+}
 Fraction::Fraction(int n) : numerator_(n), denominator_(1) {}
 Fraction::Fraction(int n, int d)
 {
-
+    if (d == 0) throw invalid_argument("Denominator cannot be 0");
+    if (n == 0) { numerator_ = 0; denominator_ = 1; }
+    else
+    {
+        auto g = gcd(abs(n), abs(d));
+        numerator_ = n / g;
+        denominator_ = abs(d) / g;
+        if (d < 0) numerator_ = -numerator_;
+    }
 }
+
 
 Fraction& Fraction::operator+=(const Fraction& rhs) { return *this; }
 Fraction& Fraction::operator-=(const Fraction& rhs) { return *this; }
