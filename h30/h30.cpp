@@ -103,9 +103,25 @@ const Fraction operator+(const Fraction& lhs, const Fraction& rhs)
     return temp;
 
 }
-const Fraction operator-(const Fraction& lhs, const Fraction& rhs) { return lhs; }
-const Fraction operator*(const Fraction& lhs, const Fraction& rhs) { return lhs; }
-const Fraction operator/(const Fraction& lhs, const Fraction& rhs) { return lhs; }
+const Fraction operator-(const Fraction& lhs, const Fraction& rhs)
+{
+    Fraction temp{lhs};
+    temp -= rhs;
+    return temp;
+}
+const Fraction operator*(const Fraction& lhs, const Fraction& rhs)
+{
+     Fraction temp{lhs};
+    temp *= rhs;
+    return temp;
+}
+const Fraction operator/(const Fraction& lhs, const Fraction& rhs)
+{
+     Fraction temp{lhs};
+    temp /= rhs;
+    return temp;
+
+}
 
 
 
