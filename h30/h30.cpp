@@ -5,6 +5,7 @@
  */
 #include <string>
 #include <stdexcept>
+#include <sstream>
 using namespace std;
 
 string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
@@ -54,7 +55,10 @@ Fraction& Fraction::operator/=(const Fraction& rhs) { return *this; }
 
 std::string Fraction::toString() const
 {
-    return "not implemented";
+    ostringstream out;
+    out << numerator_;
+    if (denominator_ != 1) out << "/" << denominator_;
+    return out.str();
 }
 
 
