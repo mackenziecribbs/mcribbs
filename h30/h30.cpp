@@ -38,7 +38,16 @@ Fraction::Fraction(int n, int d)
 }
 
 
-Fraction& Fraction::operator+=(const Fraction& rhs) { return *this; }
+Fraction& Fraction::operator+=(const Fraction& rhs)
+{
+    auto a = numerator_;
+    auto b = denominator_;
+    auto c = rhs.numerator_;
+    auto d = rhs.denominator_;
+    *this = Fraction(a*d + b*d, b*d );
+    return *this;
+
+}
 Fraction& Fraction::operator-=(const Fraction& rhs) { return *this; }
 Fraction& Fraction::operator*=(const Fraction& rhs) { return *this; }
 Fraction& Fraction::operator/=(const Fraction& rhs) { return *this; }
