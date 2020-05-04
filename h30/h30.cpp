@@ -45,7 +45,7 @@ Fraction& Fraction::operator+=(const Fraction& rhs)
     auto b = denominator_;
     auto c = rhs.numerator_;
     auto d = rhs.denominator_;
-    *this = Fraction(a*d + b*d, b*d );
+    *this = Fraction(a*d + b*c, b*d );
     return *this;
 
 }
