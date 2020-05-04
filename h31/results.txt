@@ -1,0 +1,32 @@
+INSTRUCTOR TESTING H31--mcribbs
+----------------------------------------------------------------------
+Checking function: operator[] -------------------
+   + img[0]->(255, 255, 255, 255)
+   + img[82871]->(0, 0, 0, 255)
+   + img[82044]->(255, 222, 21, 255)
+   + img[65034]->(255, 222, 21, 255)
+   + img[13190]->(25, 64, 245, 55)
+   + img[65263]->(26, 65, 246, 55)
+   + img[2195]->(27, 66, 247, 55)
+   + Correctly catches out_of_range.
+----------------------------------------------------------------------
+  Tests passing 8/8 (100%).
+
+Checking function: translate -------------------
+   + translate(50, 0) works correctly.
+   + translate(-72, 0) works correctly.
+   + translate(385, 0) works correctly.
+   + translate(-415, 0) works correctly.
+   + translate(0, 88) works correctly.
+   + translate(0, -93) works correctly.
+   + translate(0, 425) works correctly.
+   + translate(0, -465) works correctly.
+   + translate(83, 91) works correctly.
+   + translate(-91, 151) works correctly.
+----------------------------------------------------------------------
+  Tests passing 10/10 (100%).
+
+----------------------------------------------------------------------
+INSTRUCTOR TESTS H31:mcribbs: ALL TESTS -- PASS 18/18 (100%).
+----------------------------------------------------------------------
+MTU4ODU2NzczNTptY3JpYmJzOkgzMToxMDAuMDAl
