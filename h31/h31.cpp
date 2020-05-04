@@ -36,7 +36,21 @@ void Image::translate(int dx, int dy)
         }
     }
 
+    int lastRow = width() * (height() - 1);
+    for (int i = 0; i < dy; i++)
+    {
+        for (unsigned col = 0; col < width(); ++col)
+        {
+            auto temp = img[lastRow + col];
+            for (unsigned row = height() - 1; row > 0; --row)
+            {
+                img[row * width() + col] = img[(row - 1) * width() + col];
+            }
+            img[col] = temp;
+        }
+    }
 }
+
 
     /**
      * Overloaded subscript operators.
