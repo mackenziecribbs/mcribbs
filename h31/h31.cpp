@@ -22,6 +22,19 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
      */
 void Image::translate(int dx, int dy)
 {
+    Image& img = *this; // this image
+    for (unsigned row = 0; row < height(); ++row)
+    {
+        for (int i = 0; i < dx; i++)
+        {
+            int last = width() - 1; // index of last column
+            int r = row * width();
+            auto temp = img[r + last];
+            for (int j = last; j > 0; --j)
+                img[r + j] = img[r + (j - 1)];
+            img[r + 0] = temp;
+        }
+    }
 
 }
 
