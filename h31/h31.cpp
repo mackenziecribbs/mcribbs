@@ -23,6 +23,8 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 void Image::translate(int dx, int dy)
 {
     Image& img = *this; // this image
+    if (dx < 0) dx = width() - abs(dx) % width();
+    else dx = dx % width();
     for (unsigned row = 0; row < height(); ++row)
     {
         for (int i = 0; i < dx; i++)
@@ -35,7 +37,8 @@ void Image::translate(int dx, int dy)
             img[r + 0] = temp;
         }
     }
-
+    if (dy < 0) dy = height() - abs(dy) % height();
+    else dy = dy % height();
     int lastRow = width() * (height() - 1);
     for (int i = 0; i < dy; i++)
     {
