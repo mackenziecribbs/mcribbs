@@ -1,0 +1,18 @@
+TESTING H32--mcribbs
+----------------------------------------------------------------------
+Checking function: Recursive find. -------------------
+   + find("Mississipi", "ipi")
+   + find("Mississipi", "ipx")
+   + find("Sommertown", "Som")
+   + find("Sommertown", "Sommertowne")
+   + find("Somewhere in the middle", "in")
+   + find("Alice in Wonderland", "Alice")
+   + find("Ordinal", "Ordinale")
+   + find("Eenie meenie miney moe", "min")
+----------------------------------------------------------------------
+  Tests passing 8/8 (100%).
+
+----------------------------------------------------------------------
+H32:mcribbs:ALL TESTS -- PASS 8/8 (100%).
+----------------------------------------------------------------------
+MTU4ODczMjE1OTptY3JpYmJzOkgzMjoxMDAuMDAl
