@@ -1,6 +1,6 @@
 /**
     @file h32.cpp
-    @author your name here
+    @author Mackenzie Cribbs
     @version what day and meeting time
 */
 #include <string>
@@ -9,10 +9,16 @@ using namespace std;
 
 #include "h32.h"
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Add your implementation here
 
+bool find(const std::string& s, const std::string& t)
+{
+    if (s.size() < t.size()) return false;
+    if (s.substr(0, t.size()) == t) return true;
+    return find(s.substr(1), t);
+}
 
 
 
