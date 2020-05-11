@@ -1,6 +1,6 @@
 /**
     @file 33.cpp
-    @author your name here
+    @author Mackenzie Cribbs
     @version what day and meeting time
 */
 #include <string>
@@ -9,10 +9,17 @@ using namespace std;
 
 #include "h33.h"
 
-string STUDENT = "WHO AM I?"; // Add your Canvas/occ-email ID
+string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Add your implementation here
-
+std::string stringClean(const std::string& str)
+{
+    if (str.size() < 2) return str;
+    if (str.at(0) == str.at(1))
+        return str.at(0) + stringClean(str.substr(2));
+    else
+        return str.at(0) + stringClean(str.substr(1));
+}
 
 
 
