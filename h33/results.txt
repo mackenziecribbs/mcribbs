@@ -1,0 +1,16 @@
+TESTING H33--mcribbs
+----------------------------------------------------------------------
+Checking function: Recursive stringClean -------------------
+   + stringClean("yyzzza"): Success
+   + stringClean("abbbcdd"): Success
+   + stringClean("Hello"): Success
+   + stringClean("XXabcYY"): Success
+   + stringClean("112ab445"): Success
+   + stringClean("Hello Bookkeeper"): Success
+----------------------------------------------------------------------
+  Tests passing 6/6 (100%).
+
+----------------------------------------------------------------------
+H33:mcribbs:ALL TESTS -- PASS 6/6 (100%).
+----------------------------------------------------------------------
+MTU4OTE3MTM1NDptY3JpYmJzOkgzMzoxMDAuMDAl
