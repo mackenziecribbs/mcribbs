@@ -19,6 +19,6 @@
     You must write this as a recursive function, not by just
     calling the string::find() function, or by using a loop.
 */
-bool find(const std::string& s, const std::string& t);
+
 
 #endif
