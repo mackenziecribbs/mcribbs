@@ -21,7 +21,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
     double Circle::getCircumference() const { return 2 * PI * m_radius; }
     std::string Circle::toString(int decimals) const
     {
-        return "not implemented";
+        ostringstream out;
+        out << fixed << setprecision(decimals);
+        out << "Circle(radius=" << m_radius << ", center=" << Point::toString() << ")";
+        return out.str();
     }
 
     Cylinder::Cylinder(double height, double radius, double x, double y)
