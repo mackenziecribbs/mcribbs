@@ -23,7 +23,7 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
     {
         ostringstream out;
         out << fixed << setprecision(decimals);
-        out << "Circle(radius=" << m_radius << ", center=" << Point::toString() << ")";
+        out << "Circle(radius=" << m_radius << ", center=" << Point::toString(decimals) << ")";
         return out.str();
     }
 
