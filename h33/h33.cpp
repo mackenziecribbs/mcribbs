@@ -12,10 +12,11 @@ using namespace std;
 string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
 
 // Add your implementation here
+
 std::string stringClean(const std::string& str)
 {
     if (str.size() < 2) return str;
-    if (str.at(0) == str.at(1))
+    if (str.at(0) != str.at(1))
         return str.at(0) + stringClean(str.substr(1));
     return stringClean(str.substr(1));
 }
