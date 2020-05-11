@@ -16,9 +16,8 @@ std::string stringClean(const std::string& str)
 {
     if (str.size() < 2) return str;
     if (str.at(0) == str.at(1))
-        return str.at(0) + stringClean(str.substr(2));
-    else
         return str.at(0) + stringClean(str.substr(1));
+    return stringClean(str.substr(1));
 }
 
 
