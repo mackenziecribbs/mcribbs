@@ -28,7 +28,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
     : Circle(radius, x, y), m_height(height) {}
     double Cylinder::getHeight() const { return m_height; }
     double Cylinder::getVolume() const { return Circle::getArea() * m_height; }
-    double Cylinder::getArea() const { return 0; }
+    double Cylinder::getArea() const
+    {
+        return 2 * PI * getRadius() * m_height + 2 * PI * getRadius() * getRadius();
+    }
     std::string Cylinder::toString(int decimals) const
     {
         return "not implemented";
