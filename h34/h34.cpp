@@ -37,7 +37,10 @@ string STUDENT = "mcribbs"; // Add your Canvas/occ-email ID
     }
     std::string Cylinder::toString(int decimals) const
     {
-        return "not implemented";
+        ostringstream out;
+        out << fixed << setprecision(decimals);
+        out << "Cylinder(height=" << m_height << ", base=" << Circle::toString(decimals) << ")";
+        return out.str();
     }
 
 
