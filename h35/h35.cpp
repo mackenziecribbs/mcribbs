@@ -40,7 +40,12 @@ double Worker::getRate() const { return rate; }
         : Worker(name, rate) {}
 	std::string SalariedWorker::payInfo(int hours) const
 	{
-	    return "";
+	    double pay = getRate() * 40;
+	    ostringstream out;
+	    out << fixed << setprecision(2);
+	    out << getName() << "(Salaried, $ " << getRate() << ") worked "
+	        << hours << " hours. Pay: $ " << pay;
+	    return out.str();
 	}
 
 
