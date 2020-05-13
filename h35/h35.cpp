@@ -32,7 +32,7 @@ double Worker::getRate() const { return rate; }
 	    out << fixed << setprecision(2);
 	    out << getName() << "(Hourly, $ " << getRate() << ") worked "
 	        << hours << " hours. Pay: $ " << pay;
-	    return "";
+	    return out.str();
 	}
 
 
