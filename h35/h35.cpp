@@ -22,12 +22,12 @@ double Worker::getRate() const { return rate; }
 
 	HourlyWorker::HourlyWorker(const std::string& name, double rate)
 	    : Worker(name, rate) {}
-	std::string HourlyWorker::payInfo(int hours) const { return 0; }
+	std::string HourlyWorker::payInfo(int hours) const { return ""; }
 
 
     SalariedWorker::SalariedWorker(const std::string& name, double rate)
         : Worker(name, rate) {}
-	std::string SalariedWorker::payInfo(int hours) const { return 0; }
+	std::string SalariedWorker::payInfo(int hours) const { return ""; }
 
 
 /////////////// Student Tests ////////////////////////////
