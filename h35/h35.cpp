@@ -31,7 +31,7 @@ double Worker::getRate() const { return rate; }
 	    ostringstream out;
 	    out << fixed << setprecision(2);
 	    out << getName() << "(Hourly, $ " << getRate() << ") worked "
-	        << hours << " hours. Pay : $ " << pay;
+	        << hours << " hours. Pay: $ " << pay;
 	    return "";
 	}
 
